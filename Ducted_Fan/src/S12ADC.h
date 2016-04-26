@@ -52,6 +52,7 @@ Prototypes for exported functions
 void S12ADC_init (void) ;
 void S12ADC_start (void) ;
 bool S12ADC_conversion_complete (void) ;
-uint16_t S12ADC_read (void) ;
+uint16_t S12ADC_read_AN002 (void) ;
+uint16_t S12ADC_read_AN003 (void) ;
 
 #endif

@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W2.04.00 )             22-Apr-2016 13:04:10
+Renesas Optimizing Linker (W2.04.00 )             26-Apr-2016 22:32:18
 
 *** Options ***
 
@@ -41,13 +41,13 @@ Renesas Optimizing Linker (W2.04.00 )             22-Apr-2016 13:04:10
 -input="./r_bsp/board/rdkrx63n/sbrk.obj"
 -input="./r_bsp/board/rdkrx63n/vecttbl.obj"
 -start=SI,SU,B_1,R_1,B_2,R_2,B,R/0,C_1,C_2,C,C$*,L*,D*,P,W*/0FFF80000,FIXEDVECT/0FFFFFF90
--library=C:\Renesas\E2_STU~1\WORKSP~1\DUCTED~2\Debug\ADC_OneShot.lib
+-library=C:\Users\Enrico\git\DUCTED~1\DUCTED~1\Debug\ADC_OneShot.lib
 -noprelink
 -list=ADC_OneShot.map
 -show
 -nooptimize
 -debug
--output=C:\Renesas\e2_studio\Workspace\Ducted_Fan\Debug\ADC_OneShot.abs
+-output=C:\Users\Enrico\git\Ducted_Fan\Ducted_Fan\Debug\ADC_OneShot.abs
 -nocompress
 -nologo
 -nomessage
@@ -91,21 +91,21 @@ C$BSEC
 C$VECT
                                   fff80f1c  fff8131b       400   4
 L
-                                  fff8131c  fff814c8       1ad   4
+                                  fff8131c  fff814d4       1b9   4
 D
-                                  fff814cc  fff81c07       73c   4
+                                  fff814d8  fff81c13       73c   4
 D_1
-                                  fff81c08  fff81c73        6c   1
+                                  fff81c14  fff81c7f        6c   1
 D_2
-                                  fff81c74  fff81c83        10   2
+                                  fff81c80  fff81c8f        10   2
 P
-                                  fff81c84  fff8a0d0      844d   1
+                                  fff81c90  fff8a1fb      856c   1
 W
-                                  fff8a0d4  fff8a0d4         0   4
+                                  fff8a1fc  fff8a1fc         0   4
 W_1
-                                  fff8a0d4  fff8a0f7        24   1
+                                  fff8a1fc  fff8a21f        24   1
 W_2
-                                  fff8a0f8  fff8a14d        56   2
+                                  fff8a220  fff8a275        56   2
 $ADDR_C_FFFFFF80
                                   ffffff80  ffffff8f        10   1
 FIXEDVECT
@@ -251,7 +251,7 @@ FILE=.\src\main.obj
   _outValue
                                   00001d2c         4   data ,g         1
   _altitudeValue
-                                  00001d30         4   data ,g         2
+                                  00001d30         4   data ,g         4
   _sonarWDT
                                   00001d34        10   data ,g         4
   _mainWDT
@@ -1175,919 +1175,921 @@ FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
 
 SECTION=L
 FILE=.\src\main.obj
-                                  fff8131c  fff81356        3b
+                                  fff8131c  fff81361        46
 FILE=.\src\Ducted_Drivers\MPU6050.obj
-                                  fff81358  fff813cb        74
+                                  fff81364  fff813d7        74
 FILE=.\src\Ducted_Drivers\MS5611-01BA01.obj
-                                  fff813cc  fff8140f        44
+                                  fff813d8  fff8141b        44
 FILE=.\r_glyph\src\glyph\glyph.obj
-                                  fff81410  fff81441        32
+                                  fff8141c  fff8144d        32
 FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
-                                  fff81444  fff81447         4
+                                  fff81450  fff81453         4
   _deadSpace
-                                  fff81444         4   data ,g         0
+                                  fff81450         4   data ,g         0
 FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
-                                  fff81448  fff81489        42
+                                  fff81454  fff81495        42
 FILE=xprintf
-                                  fff8148c  fff81492         7
+                                  fff81498  fff8149e         7
 FILE=xldtob
-                                  fff81494  fff814b5        22
+                                  fff814a0  fff814c1        22
 FILE=xgenld
-                                  fff814b8  fff814b9         2
+                                  fff814c4  fff814c5         2
 FILE=localeco
-                                  fff814bc  fff814c8         d
+                                  fff814c8  fff814d4         d
 
 SECTION=D
 FILE=.\src\main.obj
-                                  fff814cc  fff814d3         8
+                                  fff814d8  fff814df         8
 FILE=.\src\LowLevelDrivers\CMT.obj
-                                  fff814d4  fff814d7         4
+                                  fff814e0  fff814e3         4
 FILE=.\src\Ducted_Drivers\AHRS.obj
-                                  fff814d8  fff814eb        14
+                                  fff814e4  fff814f7        14
 FILE=.\src\Ducted_Drivers\AHRS_Mahony.obj
-                                  fff814ec  fff8150f        24
+                                  fff814f8  fff8151b        24
 FILE=.\src\Ducted_Drivers\HMC5883L.obj
-                                  fff81510  fff8151f        10
+                                  fff8151c  fff8152b        10
 FILE=.\src\Ducted_Drivers\MPU6050.obj
-                                  fff81520  fff8152f        10
+                                  fff8152c  fff8153b        10
 FILE=.\src\Ducted_Drivers\Sonar.obj
-                                  fff81530  fff81533         4
+                                  fff8153c  fff8153f         4
 FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
-                                  fff81534  fff8154f        1c
+                                  fff81540  fff8155b        1c
 FILE=.\r_riic_rx600\src\r_riic_rx600.obj
-                                  fff81550  fff8156b        1c
+                                  fff8155c  fff81577        1c
 FILE=.\r_glyph\src\glyph\fonts\font_8x8.obj
-                                  fff8156c  fff8196b       400
+                                  fff81578  fff81977       400
 FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
-                                  fff8196c  fff8197f        14
+                                  fff81978  fff8198b        14
 FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
-                                  fff81980  fff81983         4
+                                  fff8198c  fff8198f         4
 FILE=sqrtf
-                                  fff81984  fff81987         4
+                                  fff81990  fff81993         4
 FILE=xfiles
-                                  fff81988  fff81a5f        d8
+                                  fff81994  fff81a6b        d8
 FILE=malloc
-                                  fff81a60  fff81a67         8
+                                  fff81a6c  fff81a73         8
 FILE=sincosfsub
-                                  fff81a68  fff81aa3        3c
+                                  fff81a74  fff81aaf        3c
 FILE=xprintf
-                                  fff81aa4  fff81aa7         4
+                                  fff81ab0  fff81ab3         4
 FILE=xctype
-                                  fff81aa8  fff81aaf         8
+                                  fff81ab4  fff81abb         8
 FILE=xstate
-                                  fff81ab0  fff81af7        48
+                                  fff81abc  fff81b03        48
 FILE=localeco
-                                  fff81af8  fff81b4b        54
+                                  fff81b04  fff81b57        54
 FILE=xwcstate
-                                  fff81b4c  fff81b8f        44
+                                  fff81b58  fff81b9b        44
 FILE=xfvalues
-                                  fff81b90  fff81c07        78
+                                  fff81b9c  fff81c13        78
 
 SECTION=D_1
 FILE=.\src\Ducted_Drivers\HMC5883L.obj
-                                  fff81c08  fff81c15         e
+                                  fff81c14  fff81c21         e
 FILE=.\src\Ducted_Drivers\MPU6050.obj
-                                  fff81c16  fff81c1b         6
+                                  fff81c22  fff81c27         6
 FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
-                                  fff81c1c  fff81c1e         3
+                                  fff81c28  fff81c2a         3
 FILE=.\r_riic_rx600\src\r_riic_rx600.obj
-                                  fff81c1f  fff81c22         4
+                                  fff81c2b  fff81c2e         4
 FILE=xfiles
-                                  fff81c23  fff81c72        50
+                                  fff81c2f  fff81c7e        50
 FILE=xstate
-                                  fff81c73  fff81c73         1
+                                  fff81c7f  fff81c7f         1
 
 SECTION=D_2
 FILE=.\src\Ducted_Drivers\Sonar.obj
-                                  fff81c74  fff81c75         2
+                                  fff81c80  fff81c81         2
 FILE=sqrtf
-                                  fff81c76  fff81c83         e
+                                  fff81c82  fff81c8f         e
 
 SECTION=P
 FILE=.\src\S12ADC.obj
-                                  fff81c84  fff81cea        67
+                                  fff81c90  fff81d09        7a
   _S12ADC_init
-                                  fff81c84        4a   func ,g         1
+                                  fff81c90        55   func ,g         1
   _S12ADC_start
-                                  fff81cce         8   func ,g         2
+                                  fff81ce5         8   func ,g         2
   _S12ADC_conversion_complete
-                                  fff81cd6         d   func ,g         2
-  _S12ADC_read
-                                  fff81ce3         8   func ,g         2
+                                  fff81ced         d   func ,g         2
+  _S12ADC_read_AN002
+                                  fff81cfa         8   func ,g         2
+  _S12ADC_read_AN003
+                                  fff81d02         8   func ,g         4
 FILE=.\src\main.obj
-                                  fff81ceb  fff82242       558
+                                  fff81d0a  fff8236d       664
   _map
-                                  fff81ceb        15   func ,g         0
+                                  fff81d0a        15   func ,g         0
   _lcd_buffer_print
-                                  fff81d00        3c   func ,g         3
+                                  fff81d1f        3c   func ,g         4
   _lcd_buffer_clear
-                                  fff81d3c        23   func ,g         0
+                                  fff81d5b        23   func ,g         0
   _lcd_buffer_flush
-                                  fff81d5f        20   func ,g         2
+                                  fff81d7e        20   func ,g         2
   _main
-                                  fff81d7f        bf   func ,g         1
+                                  fff81d9e       13f   func ,g         1
   _Setup
-                                  fff81e3e       16a   func ,g         1
+                                  fff81edd       167   func ,g         1
   _Callback_1ms
-                                  fff81fa8        2b   func ,g         0
+                                  fff82044        ac   func ,g         0
   _Callback_5ms
-                                  fff81fd3        1b   func ,g         0
+                                  fff820f0        1b   func ,g         0
   _Callback_10ms
-                                  fff81fee         d   func ,g         0
+                                  fff8210b         d   func ,g         0
   _Callback_20ms
-                                  fff81ffb       1e0   func ,g         1
+                                  fff82118       1ed   func ,g         1
   _Callback_50ms
-                                  fff821db         c   func ,g         0
+                                  fff82305         c   func ,g         0
   _Callback_100ms
-                                  fff821e7         1   func ,g         0
+                                  fff82311         1   func ,g         0
   _Callback_500ms
-                                  fff821e8         1   func ,g         0
+                                  fff82312         1   func ,g         0
   _Callback_1000ms
-                                  fff821e9         3   func ,g         0
+                                  fff82313         3   func ,g         0
   _Fallback
-                                  fff821ec        51   func ,g         2
+                                  fff82316        52   func ,g         2
   _Sonar_Fallback
-                                  fff8223d         6   func ,g         1
+                                  fff82368         6   func ,g         1
 FILE=.\src\LowLevelDrivers\MTU2a\MTU_C3.obj
-                                  fff82243  fff82316        d4
+                                  fff8236e  fff82441        d4
   _Set_MTU_U0_C3
-                                  fff82243        66   func ,g         1
+                                  fff8236e        66   func ,g         1
   _StartCount_MTU_U0_C3
-                                  fff822a9        11   func ,g         1
+                                  fff823d4        11   func ,g         1
   _HaltCount_MTU_U0_C3
-                                  fff822ba        11   func ,g         1
+                                  fff823e5        11   func ,g         1
   _GetTGR_A_MTU_U0_C3
-                                  fff822cb         8   func ,g         1
+                                  fff823f6         8   func ,g         1
   _SetTGR_A_MTU_U0_C3
-                                  fff822d3        11   func ,g         0
+                                  fff823fe        11   func ,g         0
   _SetTGR_B_MTU_U0_C3
-                                  fff822e4        11   func ,g         1
+                                  fff8240f        11   func ,g         1
   _SetTGR_C_MTU_U0_C3
-                                  fff822f5        11   func ,g         0
+                                  fff82420        11   func ,g         0
   _SetTGR_D_MTU_U0_C3
-                                  fff82306        11   func ,g         1
+                                  fff82431        11   func ,g         1
 FILE=.\src\LowLevelDrivers\MTU2a\MTU_C4.obj
-                                  fff82317  fff823ea        d4
+                                  fff82442  fff82515        d4
   _Set_MTU_U0_C4
-                                  fff82317        66   func ,g         1
+                                  fff82442        66   func ,g         1
   _StartCount_MTU_U0_C4
-                                  fff8237d        11   func ,g         1
+                                  fff824a8        11   func ,g         1
   _HaltCount_MTU_U0_C4
-                                  fff8238e        11   func ,g         1
+                                  fff824b9        11   func ,g         1
   _GetTGR_A_MTU_U0_C4
-                                  fff8239f         8   func ,g         1
+                                  fff824ca         8   func ,g         1
   _SetTGR_A_MTU_U0_C4
-                                  fff823a7        11   func ,g         0
+                                  fff824d2        11   func ,g         0
   _SetTGR_B_MTU_U0_C4
-                                  fff823b8        11   func ,g         1
+                                  fff824e3        11   func ,g         1
   _SetTGR_C_MTU_U0_C4
-                                  fff823c9        11   func ,g         0
+                                  fff824f4        11   func ,g         0
   _SetTGR_D_MTU_U0_C4
-                                  fff823da        11   func ,g         1
+                                  fff82505        11   func ,g         1
 FILE=.\src\LowLevelDrivers\MTU2a\MTU_C5.obj
-                                  fff823eb  fff8248f        a5
+                                  fff82516  fff825ba        a5
   _MTU5U_Start
-                                  fff823eb        19   func ,g         1
+                                  fff82516        19   func ,g         1
   _MTU5U_Stop
-                                  fff82404        19   func ,g         2
+                                  fff8252f        19   func ,g         2
   _MTU5U_Setup
-                                  fff8241d        63   func ,g         1
+                                  fff82548        63   func ,g         1
   _MTU5U_SetTimerCounter
-                                  fff82480         8   func ,g         0
+                                  fff825ab         8   func ,g         0
   _MTU5U_GetTimerCounter
-                                  fff82488         8   func ,g         2
+                                  fff825b3         8   func ,g         2
 FILE=.\src\LowLevelDrivers\CMT.obj
-                                  fff82490  fff825ab       11c
+                                  fff825bb  fff826d6       11c
   _CMT_init
-                                  fff82490        51   func ,g         1
+                                  fff825bb        51   func ,g         1
   _ms_delay
-                                  fff824e1        11   func ,g         4
+                                  fff8260c        11   func ,g         4
   _getTime
-                                  fff824f2         9   func ,g         0
+                                  fff8261d         9   func ,g         0
   _CMT_isr
-                                  fff824fb        b1   func ,l         0
+                                  fff82626        b1   func ,l         0
 FILE=.\src\LowLevelDrivers\I2C.obj
-                                  fff825ac  fff825cb        20
+                                  fff826d7  fff826f6        20
   _riic_master_init
-                                  fff825ac        20   func ,g         1
+                                  fff826d7        20   func ,g         1
 FILE=.\src\Ducted_Drivers\AHRS.obj
-                                  fff825cc  fff8344a       e7f
+                                  fff826f7  fff83575       e7f
   _MadgwickAHRSupdate
-                                  fff825cc       9f1   func ,g         1
+                                  fff826f7       9f1   func ,g         1
   _MadgwickAHRSupdateIMU
-                                  fff82fbd       35e   func ,g         0
+                                  fff830e8       35e   func ,g         0
   _invSqrt
-                                  fff8331b        27   func ,g         0
+                                  fff83446        27   func ,g         0
   _get_Angle_AHRS
-                                  fff83342       109   func ,g         1
+                                  fff8346d       109   func ,g         1
 FILE=.\src\Ducted_Drivers\AHRS_Mahony.obj
-                                  fff8344b  fff83f42       af8
+                                  fff83576  fff8406d       af8
   _MahonyAHRSupdate
-                                  fff8344b       70a   func ,g         1
+                                  fff83576       70a   func ,g         1
   _MahonyAHRSupdateIMU
-                                  fff83b55       29a   func ,g         0
+                                  fff83c80       29a   func ,g         0
   _inversSqrt
-                                  fff83def        27   func ,g         0
+                                  fff83f1a        27   func ,g         0
   _get_Angle_AHRS_Mahony
-                                  fff83e16       12d   func ,g         0
+                                  fff83f41       12d   func ,g         0
 FILE=.\src\Ducted_Drivers\AverageFilter.obj
-                                  fff83f43  fff83f97        55
+                                  fff8406e  fff840c2        55
   _Init_AVG
-                                  fff83f43        14   func ,g         2
+                                  fff8406e        14   func ,g         2
   _Compute_AVG
-                                  fff83f57        41   func ,g         2
+                                  fff84082        41   func ,g         2
 FILE=.\src\Ducted_Drivers\HMC5883L.obj
-                                  fff83f98  fff8440a       473
+                                  fff840c3  fff84535       473
   _Get_Mag_Value
-                                  fff83f98        c1   func ,g         1
+                                  fff840c3        c1   func ,g         1
   _Get_Mag_Value_Normalized
-                                  fff84059        90   func ,g         2
+                                  fff84184        90   func ,g         2
   _Get_Mag_Heading
-                                  fff840e9        3c   func ,g         0
+                                  fff84214        3c   func ,g         0
   _Setup_HMC5883L
-                                  fff84125       1df   func ,g         1
+                                  fff84250       1df   func ,g         1
   _IMU_write_AUXMASTER
-                                  fff84304        83   func ,g         1
+                                  fff8442f        83   func ,g         1
   _Get_Mag_Heading_Compensated
-                                  fff84387        84   func ,g         0
+                                  fff844b2        84   func ,g         0
 FILE=.\src\Ducted_Drivers\IMU_write_read.obj
-                                  fff8440b  fff8445e        54
+                                  fff84536  fff84589        54
   _IMU_write
-                                  fff8440b        28   func ,g        2a
+                                  fff84536        28   func ,g        2a
   _IMU_read
-                                  fff84433        2c   func ,g        20
+                                  fff8455e        2c   func ,g        20
 FILE=.\src\Ducted_Drivers\Kalman.obj
-                                  fff8445f  fff8457c       11e
+                                  fff8458a  fff846a7       11e
   _init_Kalman
-                                  fff8445f        61   func ,g         1
+                                  fff8458a        61   func ,g         1
   _getAngle
-                                  fff844c0        b7   func ,g         2
+                                  fff845eb        b7   func ,g         2
   _setAngle
-                                  fff84577         3   func ,g         0
+                                  fff846a2         3   func ,g         0
   _getRate
-                                  fff8457a         3   func ,g         0
+                                  fff846a5         3   func ,g         0
 FILE=.\src\Ducted_Drivers\MPU6050.obj
-                                  fff8457d  fff84e25       8a9
+                                  fff846a8  fff84f50       8a9
   _MPU6050_Test_I2C
-                                  fff8457d        45   func ,g         1
+                                  fff846a8        45   func ,g         1
   _Setup_MPU6050
-                                  fff845c2       19b   func ,g         1
+                                  fff846ed       19b   func ,g         1
   _Calibrate_Accel
-                                  fff8475d        9c   func ,g         0
+                                  fff84888        9c   func ,g         0
   _Get_Accel_Values
-                                  fff847f9        c1   func ,g         2
+                                  fff84924        c1   func ,g         2
   _Get_Accel_Gravity_Power
-                                  fff848ba        9f   func ,g         2
+                                  fff849e5        9f   func ,g         2
   _Get_Accel_Angles
-                                  fff84959        5e   func ,g         1
+                                  fff84a84        5e   func ,g         1
   _Calibrate_Gyros
-                                  fff849b7       2df   func ,g         1
+                                  fff84ae2       2df   func ,g         1
   _Get_Gyro_Value
-                                  fff84c96        f1   func ,g         1
+                                  fff84dc1        f1   func ,g         1
   _Get_Gyro_Rates
-                                  fff84d87        9f   func ,g         1
+                                  fff84eb2        9f   func ,g         1
 FILE=.\src\Ducted_Drivers\MS5611-01BA01.obj
-                                  fff84e26  fff851bf       39a
+                                  fff84f51  fff852ea       39a
   _MS5611_Init
-                                  fff84e26         c   func ,g         0
+                                  fff84f51         c   func ,g         0
   _MS5611_Reset
-                                  fff84e32        40   func ,g         1
+                                  fff84f5d        40   func ,g         1
   _MS5611_Convert_Dx
-                                  fff84e72        60   func ,g         0
+                                  fff84f9d        60   func ,g         0
   _MS5611_Read_Prom
-                                  fff84ed2        52   func ,g         1
+                                  fff84ffd        52   func ,g         1
   _MS5611_Read_Coef
-                                  fff84f24        2b   func ,g         1
+                                  fff8504f        2b   func ,g         1
   _MS5611_Read_PT
-                                  fff84f4f       271   func ,g         0
+                                  fff8507a       271   func ,g         0
 FILE=.\src\Ducted_Drivers\Motor.obj
-                                  fff851c0  fff85275        b6
+                                  fff852eb  fff853a0        b6
   _Motors_Init
-                                  fff851c0         4   func ,g         1
+                                  fff852eb         4   func ,g         1
   _Motors_On
-                                  fff851c4         4   func ,g         1
+                                  fff852ef         4   func ,g         1
   _Motor_Arm
-                                  fff851c8        11   func ,g         2
+                                  fff852f3        11   func ,g         2
   _Motor_Write_PWM
-                                  fff851d9        80   func ,g         1
+                                  fff85304        80   func ,g         1
   _Motor_Write_us
-                                  fff85259        19   func ,g         5
+                                  fff85384        19   func ,g         9
   _Motors_Off
-                                  fff85272         4   func ,g         1
+                                  fff8539d         4   func ,g         3
 FILE=.\src\Ducted_Drivers\PID.obj
-                                  fff85276  fff852f2        7d
+                                  fff853a1  fff8541d        7d
   _PID_Init
-                                  fff85276        1d   func ,g         3
+                                  fff853a1        1d   func ,g         3
   _PID_Compute
-                                  fff85293        60   func ,g         3
+                                  fff853be        60   func ,g         3
 FILE=.\src\Ducted_Drivers\Servo.obj
-                                  fff852f3  fff8541b       129
+                                  fff8541e  fff85546       129
   _Servos_Init
-                                  fff852f3        20   func ,g         1
+                                  fff8541e        20   func ,g         1
   _Servos_Off
-                                  fff85313         4   func ,g         1
+                                  fff8543e         4   func ,g         3
   _Servo_Write_PWM
-                                  fff85317        84   func ,g         2
+                                  fff85442        84   func ,g         2
   _Servo_Write_us
-                                  fff8539b        19   func ,g         0
+                                  fff854c6        19   func ,g         0
   _Servo_Write_deg
-                                  fff853b4        68   func ,g         6
+                                  fff854df        68   func ,g         a
 FILE=.\src\Ducted_Drivers\Sonar.obj
-                                  fff8541c  fff85521       106
+                                  fff85547  fff8564c       106
   _sonarInitialize
-                                  fff8541c        56   func ,g         1
+                                  fff85547        56   func ,g         1
   _sonarGetState
-                                  fff85472         9   func ,g         6
+                                  fff8559d         9   func ,g         6
   _sonarTriggerStart
-                                  fff8547b        1e   func ,g         2
+                                  fff855a6        1e   func ,g         2
   _sonarTriggerStop
-                                  fff85499        1e   func ,g         2
+                                  fff855c4        1e   func ,g         2
   _sonarEchoCountStart
-                                  fff854b7         e   func ,g         2
+                                  fff855e2         e   func ,g         2
   _sonarEchoCountStop
-                                  fff854c5        1a   func ,g         1
+                                  fff855f0        1a   func ,g         1
   _sonarGetDistance
-                                  fff854df        20   func ,g         2
+                                  fff8560a        20   func ,g         2
   _sonarEchoISR
-                                  fff854ff        23   func ,l         0
+                                  fff8562a        23   func ,l         0
 FILE=.\src\Ducted_Drivers\WatchDogTimer.obj
-                                  fff85522  fff85559        38
+                                  fff8564d  fff85684        38
   _WDT_Init
-                                  fff85522        19   func ,g         2
+                                  fff8564d        19   func ,g         2
   _WDT_Increase
-                                  fff8553b        17   func ,g         3
+                                  fff85666        17   func ,g         3
   _WDT_Reset
-                                  fff85552         4   func ,g         3
+                                  fff8567d         4   func ,g         3
   _WDT_Start
-                                  fff85556         4   func ,g         2
+                                  fff85681         4   func ,g         2
 FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
-                                  fff8555a  fff859d8       47f
+                                  fff85685  fff85b03       47f
   _R_RSPI_Init
-                                  fff8555a       1c7   func ,g         2
+                                  fff85685       1c7   func ,g         2
   _R_RSPI_Select
-                                  fff85721        4f   func ,g         1
+                                  fff8584c        4f   func ,g         1
   _R_RSPI_Deselect
-                                  fff85770        4f   func ,g         1
+                                  fff8589b        4f   func ,g         1
   _R_RSPI_BaudRateSet
-                                  fff857bf        1e   func ,g         0
+                                  fff858ea        1e   func ,g         0
   _R_RSPI_SendReceive
-                                  fff857dd        9e   func ,g         0
+                                  fff85908        9e   func ,g         0
   _R_RSPI_Read
-                                  fff8587b        80   func ,g         0
+                                  fff859a6        80   func ,g         0
   _R_RSPI_Write
-                                  fff858fb        80   func ,g         1
+                                  fff85a26        80   func ,g         1
   _R_RSPI_Lock
-                                  fff8597b        38   func ,g         1
+                                  fff85aa6        38   func ,g         1
   _R_RSPI_Unlock
-                                  fff859b3        17   func ,g         1
+                                  fff85ade        17   func ,g         1
   _R_RSPI_CheckLock
-                                  fff859ca         f   func ,g         0
+                                  fff85af5         f   func ,g         0
 FILE=.\r_riic_rx600\src\r_riic_rx600.obj
-                                  fff859d9  fff85eab       4d3
+                                  fff85b04  fff85fd6       4d3
   _R_RIIC_Init
-                                  fff859d9       312   func ,g         1
+                                  fff85b04       312   func ,g         1
   _R_RIIC_ReleaseChannel
-                                  fff85ceb        15   func ,g         0
+                                  fff85e16        15   func ,g         0
   _R_RIIC_Reset
-                                  fff85d00       161   func ,g         0
+                                  fff85e2b       161   func ,g         0
   _riic_lock
-                                  fff85e61        3d   func ,g         4
+                                  fff85f8c        3d   func ,g         4
   _riic_unlock
-                                  fff85e9e         e   func ,g        12
+                                  fff85fc9         e   func ,g        12
 FILE=.\r_riic_rx600\src\r_riic_rx600_master.obj
-                                  fff85eac  fff865ae       703
+                                  fff85fd7  fff866d9       703
   _R_RIIC_MasterTransmitHead
-                                  fff85eac       19c   func ,g         2
+                                  fff85fd7       19c   func ,g         2
   _R_RIIC_MasterTransmit
-                                  fff86048       1a5   func ,g         1
+                                  fff86173       1a5   func ,g         1
   _R_RIIC_MasterReceive
-                                  fff861ed       223   func ,g         1
+                                  fff86318       223   func ,g         1
   _nack_detected
-                                  fff86410        5a   func ,l         8
+                                  fff8653b        5a   func ,l         8
   _wait_for_status
-                                  fff8646a       145   func ,l        15
+                                  fff86595       145   func ,l        15
 FILE=.\r_glyph\src\r_glyph.obj
-                                  fff865af  fff86655        a7
+                                  fff866da  fff86780        a7
   _R_GLYPH_Open
-                                  fff865af        46   func ,g         1
+                                  fff866da        46   func ,g         1
   _R_GLYPH_CommandSend
-                                  fff865f5         8   func ,g         1
+                                  fff86720         8   func ,g         1
   _R_GLYPH_DataSend
-                                  fff865fd         9   func ,g         1
+                                  fff86728         9   func ,g         1
   _glyph_send_byte
-                                  fff86606        50   func ,g         2
+                                  fff86731        50   func ,g         2
 FILE=.\r_glyph\src\r_glyph_register.obj
-                                  fff86656  fff866b3        5e
+                                  fff86781  fff867de        5e
   _GlyphCommOpen
-                                  fff86656        2c   func ,g         1
+                                  fff86781        2c   func ,g         1
   _GlyphLCDOpen
-                                  fff86682        32   func ,g         1
+                                  fff867ad        32   func ,g         1
 FILE=.\r_glyph\src\glyph\glyph.obj
-                                  fff866b4  fff869b8       305
+                                  fff867df  fff86ae3       305
   _GlyphOpen
-                                  fff866b4        4c   func ,g         1
+                                  fff867df        4c   func ,g         1
   _GlyphClose
-                                  fff86700        40   func ,g         0
+                                  fff8682b        40   func ,g         0
   _GlyphWrite
-                                  fff86740         7   func ,g         0
+                                  fff8686b         7   func ,g         0
   _GlyphRead
-                                  fff86747         7   func ,g         0
+                                  fff86872         7   func ,g         0
   _GlyphGetStatus
-                                  fff8674e         b   func ,g         0
+                                  fff86879         b   func ,g         0
   _GlyphSetX
-                                  fff86759         b   func ,g         0
+                                  fff86884         b   func ,g         0
   _GlyphSetY
-                                  fff86764         b   func ,g         0
+                                  fff8688f         b   func ,g         0
   _GlyphSetXY
-                                  fff8676f        25   func ,g         1
+                                  fff8689a        25   func ,g         1
   _GlyphGetXY
-                                  fff86794        25   func ,g         0
+                                  fff868bf        25   func ,g         0
   _GlyphSetFont
-                                  fff867b9         b   func ,g         1
+                                  fff868e4         b   func ,g         1
   _GlyphGetFont
-                                  fff867c4         b   func ,g         0
+                                  fff868ef         b   func ,g         0
   _GlyphSetDrawMode
-                                  fff867cf         b   func ,g         5
+                                  fff868fa         b   func ,g         5
   _GlyphChar
-                                  fff867da         b   func ,g         0
+                                  fff86905         b   func ,g         0
   _GlyphString
-                                  fff867e5        24   func ,g         1
+                                  fff86910        24   func ,g         1
   _GlyphGetVersionInfo
-                                  fff86809        b6   func ,g         0
+                                  fff86934        b6   func ,g         0
   _GlyphClearScreen
-                                  fff868bf         b   func ,g         2
+                                  fff869ea         b   func ,g         2
   _GlyphInvertScreen
-                                  fff868ca         5   func ,g         0
+                                  fff869f5         5   func ,g         0
   _GlyphNormalScreen
-                                  fff868cf         5   func ,g         1
+                                  fff869fa         5   func ,g         1
   _GlyphSleep
-                                  fff868d4         5   func ,g         0
+                                  fff869ff         5   func ,g         0
   _GlyphWake
-                                  fff868d9         5   func ,g         0
+                                  fff86a04         5   func ,g         0
   _GlyphDrawTestPattern
-                                  fff868de         5   func ,g         0
+                                  fff86a09         5   func ,g         0
   _GlyphDrawBlock
-                                  fff868e3        5f   func ,g         0
+                                  fff86a0e        5f   func ,g         0
   _GlyphEraseBlock
-                                  fff86942        5f   func ,g         1
+                                  fff86a6d        5f   func ,g         1
   _GlyphSetContrast
-                                  fff869a1         c   func ,g         0
+                                  fff86acc         c   func ,g         0
   _GlyphSetContrastBoost
-                                  fff869ad         c   func ,g         0
+                                  fff86ad8         c   func ,g         0
 FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
-                                  fff869b9  fff8729b       8e3
+                                  fff86ae4  fff873c6       8e3
   _ST7579_Open
-                                  fff869b9        96   func ,g         1
+                                  fff86ae4        96   func ,g         1
   _ST7579_Close
-                                  fff86a4f         3   func ,g         1
+                                  fff86b7a         3   func ,g         1
   _ST7579_Write
-                                  fff86a52       51b   func ,g         1
+                                  fff86b7d       51b   func ,g         1
   _ST7579_Read
-                                  fff86f6d        ac   func ,g         1
+                                  fff87098        ac   func ,g         1
   _ST7579_SetSystemBiasBooster
-                                  fff87019        ba   func ,g         2
+                                  fff87144        ba   func ,g         2
   _ST7579_SetVO_Range
-                                  fff870d3        56   func ,g         2
+                                  fff871fe        56   func ,g         2
   _ST7579_Config
-                                  fff87129        4e   func ,g         0
+                                  fff87254        4e   func ,g         0
   _ST7579_Send16bitsCommand
-                                  fff87177        1c   func ,g         1
+                                  fff872a2        1c   func ,g         1
   _ST7579_Send8bitsData
-                                  fff87193         9   func ,g         0
+                                  fff872be         9   func ,g         0
   _ST7579_SetFrameRate
-                                  fff8719c        6f   func ,g         2
+                                  fff872c7        6f   func ,g         2
   _ST7579_SetPage
-                                  fff8720b        23   func ,g         3
+                                  fff87336        23   func ,g         3
   _ST7579_SetChar
-                                  fff8722e        21   func ,g         4
+                                  fff87359        21   func ,g         4
   _ST7579_SetLine
-                                  fff8724f        4d   func ,g         1
+                                  fff8737a        4d   func ,g         1
 FILE=.\r_bsp\board\rdkrx63n\lowlvl.obj
-                                  fff8729c  fff872c9        2e
+                                  fff873c7  fff873f4        2e
   _charput
-                                  fff8729c         0   none ,g         1
+                                  fff873c7         0   none ,g         1
   __C2ESTART
-                                  fff8729c         0   none ,l         0
+                                  fff873c7         0   none ,l         0
   __TXLOOP
-                                  fff872a5         0   none ,l         1
+                                  fff873d0         0   none ,l         1
   __WRITEFC2E0
-                                  fff872ab         0   none ,l         0
+                                  fff873d6         0   none ,l         0
   __CHARPUTEXIT
-                                  fff872b2         0   none ,l         0
+                                  fff873dd         0   none ,l         0
   _charget
-                                  fff872b3         0   none ,g         1
+                                  fff873de         0   none ,g         1
   __E2CSTART
-                                  fff872b3         0   none ,l         0
+                                  fff873de         0   none ,l         0
   __RXLOOP
-                                  fff872bc         0   none ,l         1
+                                  fff873e7         0   none ,l         1
   __READFE2C0
-                                  fff872c2         0   none ,l         0
+                                  fff873ed         0   none ,l         0
   __CHARGETEXIT
-                                  fff872c9         0   none ,l         0
+                                  fff873f4         0   none ,l         0
 FILE=.\r_bsp\board\rdkrx63n\hwsetup.obj
-                                  fff872ca  fff87413       14a
+                                  fff873f5  fff8753e       14a
   _hardware_setup
-                                  fff872ca       14a   func ,g         1
+                                  fff873f5       14a   func ,g         1
 FILE=.\r_bsp\board\rdkrx63n\lcd.obj
-                                  fff87414  fff874aa        97
+                                  fff8753f  fff875d5        97
   _lcd_initialize
-                                  fff87414        35   func ,g         1
+                                  fff8753f        35   func ,g         1
   _lcd_clear
-                                  fff87449         c   func ,g         1
+                                  fff87574         c   func ,g         1
   _lcd_display
-                                  fff87455        56   func ,g         b
+                                  fff87580        56   func ,g         f
 FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
-                                  fff874ab  fff87643       199
+                                  fff875d6  fff8776e       199
   __INIT_IOLIB
-                                  fff874ab        77   func ,g         1
+                                  fff875d6        77   func ,g         1
   __CLOSEALL
-                                  fff87522        21   func ,g         1
+                                  fff8764d        21   func ,g         1
   _open
-                                  fff87543        79   func ,g         1
+                                  fff8766e        79   func ,g         1
   _close
-                                  fff875bc         3   func ,g         1
+                                  fff876e7         3   func ,g         1
   _write
-                                  fff875bf        42   func ,g         1
+                                  fff876ea        42   func ,g         1
   _read
-                                  fff87601        3f   func ,g         0
+                                  fff8772c        3f   func ,g         0
   _lseek
-                                  fff87640         4   func ,g         0
+                                  fff8776b         4   func ,g         0
 FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
-                                  fff87644  fff876ed        aa
+                                  fff8776f  fff87818        aa
   _PowerON_Reset_PC
-                                  fff87644        aa   entry,g         1
+                                  fff8776f        aa   entry,g         1
 FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
-                                  fff876ee  fff8770e        21
+                                  fff87819  fff87839        21
   _sbrk
-                                  fff876ee        21   func ,g         1
+                                  fff87819        21   func ,g         1
 FILE=.\r_bsp\board\rdkrx63n\vecttbl.obj
-                                  fff8770f  fff87720        12
+                                  fff8783a  fff8784b        12
   _excep_supervisor_inst_isr
-                                  fff8770f         3   func ,g         1
+                                  fff8783a         3   func ,g         1
   _excep_undefined_inst_isr
-                                  fff87712         3   func ,g         1
+                                  fff8783d         3   func ,g         1
   _excep_floating_point_isr
-                                  fff87715         3   func ,g         1
+                                  fff87840         3   func ,g         1
   _non_maskable_isr
-                                  fff87718         3   func ,g         1
+                                  fff87843         3   func ,g         1
   _undefined_interrupt_source_isr
-                                  fff8771b         3   func ,g         7
+                                  fff87846         3   func ,g         7
   _bus_error_isr
-                                  fff8771e         3   func ,g         0
+                                  fff87849         3   func ,g         0
 FILE=asinf
-                                  fff87721  fff8781d        fd
+                                  fff8784c  fff87948        fd
   _poly_asinf
-                                  fff87721        4b   func ,l         1
+                                  fff8784c        4b   func ,l         1
   _asinf_special
-                                  fff8776c        2d   func ,l         1
+                                  fff87897        2d   func ,l         1
   _asinl
-                                  fff87799         2   func ,g         0
+                                  fff878c4         2   func ,g         0
   _asin
-                                  fff8779b         2   func ,g         3
+                                  fff878c6         2   func ,g         3
   _asinf
-                                  fff8779d        81   func ,g         1
+                                  fff878c8        81   func ,g         1
 FILE=atanf
-                                  fff8781e  fff8793e       121
+                                  fff87949  fff87a69       121
   _poly_atanf
-                                  fff8781e        73   func ,l         3
+                                  fff87949        73   func ,l         3
   _atanf_special_case
-                                  fff87891        25   func ,l         2
+                                  fff879bc        25   func ,l         2
   _atanl
-                                  fff878b6         2   func ,g         0
-  _atan
-                                  fff878b8         2   func ,g         5
-  _atanf
-                                  fff878ba        85   func ,g         1
-FILE=atan2f
-                                  fff8793f  fff8796b        2d
-  _atan2l
-                                  fff8793f         2   func ,g         0
-  _atan2
-                                  fff87941         2   func ,g         5
-  _atan2f
-                                  fff87943        29   func ,g         1
-FILE=cosf
-                                  fff8796c  fff8799f        34
-  _cosl
-                                  fff8796c         2   func ,g         0
-  _cos
-                                  fff8796e         2   func ,g         3
-  _cosf
-                                  fff87970        30   func ,g         1
-FILE=sinf
-                                  fff879a0  fff879e0        41
-  _sinl
-                                  fff879a0         2   func ,g         0
-  _sin
-                                  fff879a2         2   func ,g         3
-  _sinf
-                                  fff879a4        3d   func ,g         1
-FILE=powf
-                                  fff879e1  fff87a0d        2d
-  _powl
                                   fff879e1         2   func ,g         0
+  _atan
+                                  fff879e3         2   func ,g         5
+  _atanf
+                                  fff879e5        85   func ,g         1
+FILE=atan2f
+                                  fff87a6a  fff87a96        2d
+  _atan2l
+                                  fff87a6a         2   func ,g         0
+  _atan2
+                                  fff87a6c         2   func ,g         5
+  _atan2f
+                                  fff87a6e        29   func ,g         1
+FILE=cosf
+                                  fff87a97  fff87aca        34
+  _cosl
+                                  fff87a97         2   func ,g         0
+  _cos
+                                  fff87a99         2   func ,g         3
+  _cosf
+                                  fff87a9b        30   func ,g         1
+FILE=sinf
+                                  fff87acb  fff87b0b        41
+  _sinl
+                                  fff87acb         2   func ,g         0
+  _sin
+                                  fff87acd         2   func ,g         3
+  _sinf
+                                  fff87acf        3d   func ,g         1
+FILE=powf
+                                  fff87b0c  fff87b38        2d
+  _powl
+                                  fff87b0c         2   func ,g         0
   _pow
-                                  fff879e3         2   func ,g         d
+                                  fff87b0e         2   func ,g         d
   _powf
-                                  fff879e5        29   func ,g         1
+                                  fff87b10        29   func ,g         1
 FILE=sqrtf
-                                  fff87a0e  fff87ae1        d4
+                                  fff87b39  fff87c0c        d4
   _in_sqrtf1
-                                  fff87a0e        4f   func ,l         1
+                                  fff87b39        4f   func ,l         1
   _sqrt_rare0
-                                  fff87a5d        27   func ,l         1
+                                  fff87b88        27   func ,l         1
   _sqrtl
-                                  fff87a84         2   func ,g         0
+                                  fff87baf         2   func ,g         0
   _sqrt
-                                  fff87a86         2   func ,g         4
+                                  fff87bb1         2   func ,g         4
   _sqrtf
-                                  fff87a88        5a   func ,g         2
+                                  fff87bb3        5a   func ,g         2
 FILE=freopen
-                                  fff87ae2  fff87b10        2f
+                                  fff87c0d  fff87c3b        2f
   _freopen
-                                  fff87ae2        2f   func ,g         3
+                                  fff87c0d        2f   func ,g         3
 FILE=fclose
-                                  fff87b11  fff87b64        54
+                                  fff87c3c  fff87c8f        54
   _fclose
-                                  fff87b11        54   func ,g         4
+                                  fff87c3c        54   func ,g         4
 FILE=printf
-                                  fff87b65  fff87ba3        3f
+                                  fff87c90  fff87cce        3f
   _prout
-                                  fff87b65        1d   func ,l         1
+                                  fff87c90        1d   func ,l         1
   _printf
-                                  fff87b82        22   func ,g         6
+                                  fff87cad        22   func ,g         6
 FILE=sprintf
-                                  fff87ba4  fff87bda        37
+                                  fff87ccf  fff87d05        37
   _prout
-                                  fff87ba4         b   func ,l         1
+                                  fff87ccf         b   func ,l         1
   _sprintf
-                                  fff87baf        2c   func ,g         7
+                                  fff87cda        2c   func ,g         7
 FILE=vsprintf
-                                  fff87bdb  fff87c0e        34
+                                  fff87d06  fff87d39        34
   _prout
-                                  fff87bdb         b   func ,l         1
+                                  fff87d06         b   func ,l         1
   _vsprintf
-                                  fff87be6        29   func ,g         1
+                                  fff87d11        29   func ,g         1
 FILE=__initsct
-                                  fff87c0f  fff87c58        4a
+                                  fff87d3a  fff87d83        4a
   __INITSCT
-                                  fff87c0f         0   none ,g         1
+                                  fff87d3a         0   none ,g         1
   loop1
-                                  fff87c21         0   none ,l         1
+                                  fff87d4c         0   none ,l         1
   next_loop1
-                                  fff87c2f         0   none ,l         2
+                                  fff87d5a         0   none ,l         2
   loop3
-                                  fff87c41         0   none ,l         1
+                                  fff87d6c         0   none ,l         1
   next_loop3
-                                  fff87c52         0   none ,l         2
+                                  fff87d7d         0   none ,l         2
 FILE=free
-                                  fff87c59  fff87cdb        83
+                                  fff87d84  fff87e06        83
   _free
-                                  fff87c59        83   func ,g         7
+                                  fff87d84        83   func ,g         7
 FILE=malloc
-                                  fff87cdc  fff87db9        de
+                                  fff87e07  fff87ee4        de
   _findmem
-                                  fff87cdc        7b   func ,l         1
+                                  fff87e07        7b   func ,l         1
   _malloc
-                                  fff87d57        63   func ,g         6
+                                  fff87e82        63   func ,g         6
 FILE=_i_atn2s
-                                  fff87dba  fff87de5        2c
+                                  fff87ee5  fff87f10        2c
   __in_atan2s
-                                  fff87dba        2c   func ,g         1
+                                  fff87ee5        2c   func ,g         1
 FILE=_in_pows
-                                  fff87de6  fff87eee       109
+                                  fff87f11  fff88019       109
   __in_pows
-                                  fff87de6       109   func ,g         1
+                                  fff87f11       109   func ,g         1
 FILE=asincosfsub
-                                  fff87eef  fff87f83        95
+                                  fff8801a  fff880ae        95
   ___poly_acosf
-                                  fff87eef        55   func ,g         1
+                                  fff8801a        55   func ,g         1
   ___poly_acosf_neg
-                                  fff87f44        40   func ,g         1
+                                  fff8806f        40   func ,g         1
 FILE=nanfval
-                                  fff87f84  fff87f8a         7
+                                  fff880af  fff880b5         7
   ___nanf_value
-                                  fff87f84         7   func ,g         3
+                                  fff880af         7   func ,g         3
 FILE=sincosfsub
-                                  fff87f8b  fff88074        ea
+                                  fff880b6  fff8819f        ea
   ___poly_sinf
-                                  fff87f8b        31   func ,g         3
+                                  fff880b6        31   func ,g         3
   ___poly_cosf
-                                  fff87fbc        28   func ,g         3
+                                  fff880e7        28   func ,g         3
   _poly_cosfn
-                                  fff87fe4         7   func ,l         1
+                                  fff8810f         7   func ,l         1
   _poly_sinfn
-                                  fff87feb         5   func ,l         1
+                                  fff88116         5   func ,l         1
   _sincosf_special
-                                  fff87ff0        33   func ,l         1
+                                  fff8811b        33   func ,l         1
   ___internal_sincosf
-                                  fff88023        52   func ,g         4
+                                  fff8814e        52   func ,g         4
 FILE=fwrite
-                                  fff88075  fff88147        d3
+                                  fff881a0  fff88272        d3
   _fwrite
-                                  fff88075        d3   func ,g         1
+                                  fff881a0        d3   func ,g         1
 FILE=fflush
-                                  fff88148  fff881ca        83
+                                  fff88273  fff882f5        83
   _fflush
-                                  fff88148        83   func ,g         5
+                                  fff88273        83   func ,g         5
 FILE=xfoprep
-                                  fff881cb  fff882a2        d8
+                                  fff882f6  fff883cd        d8
   __Foprep
-                                  fff881cb        d8   func ,g         1
+                                  fff882f6        d8   func ,g         1
 FILE=xfofind
-                                  fff882a3  fff88330        8e
+                                  fff883ce  fff8845b        8e
   __Fofind
-                                  fff882a3        45   func ,g         0
+                                  fff883ce        45   func ,g         0
   __Fofree
-                                  fff882e8        49   func ,g         2
+                                  fff88413        49   func ,g         2
 FILE=xprintf
-                                  fff88331  fff88596       266
+                                  fff8845c  fff886c1       266
   __Printf
-                                  fff88331       266   func ,g         3
+                                  fff8845c       266   func ,g         3
 FILE=xgetmem
-                                  fff88597  fff885b1        1b
+                                  fff886c2  fff886dc        1b
   __Getmem
-                                  fff88597        1b   func ,g         1
+                                  fff886c2        1b   func ,g         1
 FILE=fmodf
-                                  fff885b2  fff885e3        32
+                                  fff886dd  fff8870e        32
   _fmodl
-                                  fff885b2         2   func ,g         0
+                                  fff886dd         2   func ,g         0
   _fmod
-                                  fff885b4         2   func ,g         1
+                                  fff886df         2   func ,g         1
   _fmodf
-                                  fff885b6        2e   func ,g         2
+                                  fff886e1        2e   func ,g         2
 FILE=_i_atans
-                                  fff885e4  fff88755       172
+                                  fff8870f  fff88880       172
   __in_atans
-                                  fff885e4       172   func ,g         1
+                                  fff8870f       172   func ,g         1
 FILE=_i_ldes
-                                  fff88756  fff887d4        7f
+                                  fff88881  fff888ff        7f
   __in_ldexps
-                                  fff88756        7f   func ,g         4
+                                  fff88881        7f   func ,g         4
 FILE=_in_exps
-                                  fff887d5  fff888cf        fb
+                                  fff88900  fff889fa        fb
   __in_exps
-                                  fff887d5        fb   func ,g         2
+                                  fff88900        fb   func ,g         2
 FILE=_in_logs
-                                  fff888d0  fff88998        c9
+                                  fff889fb  fff88ac3        c9
   __in_logs
-                                  fff888d0        c9   func ,g         2
+                                  fff889fb        c9   func ,g         2
 FILE=xfwprep
-                                  fff88999  fff88a31        99
+                                  fff88ac4  fff88b5c        99
   __Fwprep
-                                  fff88999        99   func ,g         1
+                                  fff88ac4        99   func ,g         1
 FILE=xputfld
-                                  fff88a32  fff88eca       499
+                                  fff88b5d  fff88ff5       499
   __Putfld
-                                  fff88a32       499   func ,g         1
+                                  fff88b5d       499   func ,g         1
 FILE=xfopen
-                                  fff88ecb  fff88efa        30
+                                  fff88ff6  fff89025        30
   __Fopen
-                                  fff88ecb        30   func ,g         1
+                                  fff88ff6        30   func ,g         1
 FILE=xvacopy
-                                  fff88efb  fff88f02         8
+                                  fff89026  fff8902d         8
   __Vacopy
-                                  fff88efb         8   func ,g         2
+                                  fff89026         8   func ,g         2
 FILE=xputtxt
-                                  fff88f03  fff891e7       2e5
+                                  fff8902e  fff89312       2e5
   __Puttxt
-                                  fff88f03       2e5   func ,g         3
+                                  fff8902e       2e5   func ,g         3
 FILE=strchr
-                                  fff891e8  fff891fd        16
+                                  fff89313  fff89328        16
   _strchr
-                                  fff891e8        16   func ,g         2
+                                  fff89313        16   func ,g         2
 FILE=xctype
-                                  fff891fe  fff89213        16
+                                  fff89329  fff8933e        16
   __Getpctype
-                                  fff891fe        16   func ,g         0
+                                  fff89329        16   func ,g         0
 FILE=_a_atans
-                                  fff89214  fff89238        25
+                                  fff8933f  fff89363        25
   __app_atans
-                                  fff89214        25   func ,g         4
+                                  fff8933f        25   func ,g         4
 FILE=_i_fmds
-                                  fff89239  fff89312        da
+                                  fff89364  fff8943d        da
   __in_fmods
-                                  fff89239        da   func ,g         2
+                                  fff89364        da   func ,g         2
 FILE=xldtob
-                                  fff89313  fff8974a       438
+                                  fff8943e  fff89875       438
   __Ldtob
-                                  fff89313       438   func ,g         1
+                                  fff8943e       438   func ,g         1
 FILE=xputstr
-                                  fff8974b  fff8982a        e0
+                                  fff89876  fff89955        e0
   __Putstr
-                                  fff8974b        e0   func ,g         1
+                                  fff89876        e0   func ,g         1
 FILE=xlitob
-                                  fff8982b  fff89942       118
+                                  fff89956  fff89a6d       118
   __Litob
-                                  fff8982b       118   func ,g         1
+                                  fff89956       118   func ,g         1
 FILE=xgenld
-                                  fff89943  fff89bf0       2ae
+                                  fff89a6e  fff89d1b       2ae
   __Genld
-                                  fff89943       2ae   func ,g         1
+                                  fff89a6e       2ae   func ,g         1
 FILE=xwctomb
-                                  fff89bf1  fff89d49       159
+                                  fff89d1c  fff89e74       159
   __Wctombx
-                                  fff89bf1       113   func ,g         1
+                                  fff89d1c       113   func ,g         1
   __Wctomb
-                                  fff89d04        46   func ,g         1
+                                  fff89e2f        46   func ,g         1
 FILE=xstate
-                                  fff89d4a  fff89d7b        32
+                                  fff89e75  fff89ea6        32
   __Getmbcurmax
-                                  fff89d4a        16   func ,g         2
+                                  fff89e75        16   func ,g         2
   __Getpmbstate
-                                  fff89d60        1c   func ,g         0
+                                  fff89e8b        1c   func ,g         0
 FILE=xldscale
-                                  fff89d7c  fff89d7f         4
+                                  fff89ea7  fff89eaa         4
   __LDscale
-                                  fff89d7c         4   func ,g         1
+                                  fff89ea7         4   func ,g         1
 FILE=xldunsca
-                                  fff89d80  fff89d83         4
+                                  fff89eab  fff89eae         4
   __LDunscale
-                                  fff89d80         4   func ,g         1
+                                  fff89eab         4   func ,g         1
 FILE=__COM_DIV64u
-                                  fff89d84  fff89e1c        99
+                                  fff89eaf  fff89f47        99
   __COM_DIV64u
-                                  fff89d84         0   none ,g         2
+                                  fff89eaf         0   none ,g         2
   _Loop_Init
-                                  fff89d8e         0   none ,l         2
+                                  fff89eb9         0   none ,l         2
   _Loop
-                                  fff89d96         0   none ,l         1
+                                  fff89ec1         0   none ,l         1
   _DivStart
-                                  fff89da2         0   none ,l         3
+                                  fff89ecd         0   none ,l         3
   _Success
-                                  fff89db0         0   none ,l         1
+                                  fff89edb         0   none ,l         1
   _DivEnd
-                                  fff89dbc         0   none ,l         0
+                                  fff89ee7         0   none ,l         0
   IXI6DIV
-                                  fff89dc1         0   none ,l         1
+                                  fff89eec         0   none ,l         1
   IXI4DIV
-                                  fff89dd3         0   none ,l         1
+                                  fff89efe         0   none ,l         1
   IXI2DIV
-                                  fff89de3         0   none ,l         1
+                                  fff89f0e         0   none ,l         1
   I8I2DIV
-                                  fff89deb         0   none ,l         1
+                                  fff89f16         0   none ,l         1
   I4I2DIV
-                                  fff89e19         0   none ,l         1
+                                  fff89f44         0   none ,l         1
   _i8divU_End
-                                  fff89e1c         0   none ,l         0
+                                  fff89f47         0   none ,l         0
 FILE=__COM_MOD64u
-                                  fff89e1d  fff89ea3        87
+                                  fff89f48  fff89fce        87
   __COM_MOD64u
-                                  fff89e1d         0   none ,g         1
+                                  fff89f48         0   none ,g         1
   _Loop_Init
-                                  fff89e27         0   none ,l         2
+                                  fff89f52         0   none ,l         2
   _Loop
-                                  fff89e2b         0   none ,l         1
+                                  fff89f56         0   none ,l         1
   _DivStart
-                                  fff89e37         0   none ,l         3
+                                  fff89f62         0   none ,l         3
   _Success
-                                  fff89e45         0   none ,l         1
+                                  fff89f70         0   none ,l         1
   _DivEnd
-                                  fff89e4d         0   none ,l         0
+                                  fff89f78         0   none ,l         0
   IXI6DIV
-                                  fff89e4e         0   none ,l         1
+                                  fff89f79         0   none ,l         1
   IXI4DIV
-                                  fff89e60         0   none ,l         1
+                                  fff89f8b         0   none ,l         1
   IXI2DIV
-                                  fff89e70         0   none ,l         1
+                                  fff89f9b         0   none ,l         1
   I8I2DIV
-                                  fff89e78         0   none ,l         1
+                                  fff89fa3         0   none ,l         1
   I4I2DIV
-                                  fff89e98         0   none ,l         1
+                                  fff89fc3         0   none ,l         1
 FILE=_div
-                                  fff89ea4  fff89eaf         c
+                                  fff89fcf  fff89fda         c
   _ldiv
-                                  fff89ea4         0   none ,g         1
+                                  fff89fcf         0   none ,g         1
   _div
-                                  fff89ea4         0   none ,g         1
+                                  fff89fcf         0   none ,g         1
 FILE=localeco
-                                  fff89eb0  fff89eb6         7
+                                  fff89fdb  fff89fe1         7
   _localeconv
-                                  fff89eb0         7   func ,g         1
+                                  fff89fdb         7   func ,g         1
 FILE=xwcstate
-                                  fff89eb7  fff89ed2        1c
+                                  fff89fe2  fff89ffd        1c
   __Getpwcstate
-                                  fff89eb7        1c   func ,g         0
+                                  fff89fe2        1c   func ,g         0
 FILE=xfdscale
-                                  fff89ed3  fff89ff6       124
+                                  fff89ffe  fff8a121       124
   __FDscale
-                                  fff89ed3       124   func ,g         1
+                                  fff89ffe       124   func ,g         1
 FILE=xfdunsca
-                                  fff89ff7  fff8a051        5b
+                                  fff8a122  fff8a17c        5b
   __FDunscale
-                                  fff89ff7        5b   func ,g         1
+                                  fff8a122        5b   func ,g         1
 FILE=xfdnorm
-                                  fff8a052  fff8a0d0        7f
+                                  fff8a17d  fff8a1fb        7f
   __FDnorm
-                                  fff8a052        7f   func ,g         2
+                                  fff8a17d        7f   func ,g         2
 
 SECTION=W_1
 FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
-                                  fff8a0d4  fff8a0f7        24
+                                  fff8a1fc  fff8a21f        24
 
 SECTION=W_2
 FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
-                                  fff8a0f8  fff8a14d        56
+                                  fff8a220  fff8a275        56
 
 SECTION=$ADDR_C_FFFFFF80
 FILE=.\r_bsp\board\rdkrx63n\flash_options.obj

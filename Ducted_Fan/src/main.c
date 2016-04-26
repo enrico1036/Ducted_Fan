@@ -1,24 +1,24 @@
 /*******************************************************************************
 * DISCLAIMER
-* This software is supplied by Renesas Electronics Corporation and is only 
-* intended for use with Renesas products. No other uses are authorized. This 
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
 * software is owned by Renesas Electronics Corporation and is protected under
 * all applicable laws, including copyright laws.
 * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
 * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
-* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
 * AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
-* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
-* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
 * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
 * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
 * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 * Renesas reserves the right, without notice, to make changes to this software
 * and to discontinue the availability of this software. By using this software,
-* you agree to the additional terms and conditions found by accessing the 
+* you agree to the additional terms and conditions found by accessing the
 * following link:
 * http://www.renesas.com/disclaimer *
-* Copyright (C) 2012 Renesas Electronics Corporation. All rights reserved.    
+* Copyright (C) 2012 Renesas Electronics Corporation. All rights reserved.
 *******************************************************************************/
 /*******************************************************************************
 * File Name     : adc_oneshot_demo_main.c
@@ -29,7 +29,7 @@
 * H/W Platform  : YRDKRX63N
 * Description   : This sample demonstrates use of the 12-bit A/D converter (S12ADC).
 *                 The S12ADC is set up for one-shot reading of channel AN002.
-*                 AN002 is connected to the potentiometer VR1 on the YRDKRX63N board.  
+*                 AN002 is connected to the potentiometer VR1 on the YRDKRX63N board.
 *                 Each time SW1 is pressed the S12ADC is started and the ADC reading
 *                 is recorded and displayed on the LCD.
 * Operation     : 1. Build the sample code (CTRL+B) and connect to the YRDK.
@@ -40,15 +40,15 @@
 * 						Run > Debug As > Renesas GDB Hardware Launch
 *
 *                 2. Click 'Restart' to start the software.
-*         
+*
 *                 3. The debug LCD will show the name of the sample along with
-*                    instructions directing you to adjust pot VR1 and then 
+*                    instructions directing you to adjust pot VR1 and then
 *                    press SW1.
 *
 *                 4. The current ADC value, in decimal format, and the voltage that
 *                    represents are displayed.
-*                      
-*******************************************************************************/         
+*
+*******************************************************************************/
 /*******************************************************************************
 * History : DD.MM.YYYY     Version     Description
 *         : 15.02.2012     1.00        First release
@@ -149,7 +149,7 @@ uint16_t analogRead;
 
 float altitudeValue;
 
-float dt = 0.05;
+float dt = 0.02;
 
 WDT_struct sonarWDT;
 WDT_struct mainWDT;
@@ -280,7 +280,7 @@ void Setup() {
 
 	desiredState.key.motor_diff_us = 0;
 	desiredState.key.abs.pos.z = 0.20;
-	altitudeValue = 200;
+	altitudeValue = 0;
 	mainWDT = WDT_Init(500, Fallback);
 	WDT_Start(&mainWDT);
 	sonarWDT = WDT_Init(60, Sonar_Fallback);
@@ -299,8 +299,11 @@ void Callback_1ms() {
 	while (false == S12ADC_conversion_complete()) {
 	}
 	/* Fetch the results from the ADC */
-	analogRead = S12ADC_read();
+	analogRead = S12ADC_read_AN002();
 
+	if(S12ADC_read_AN003() < 200)
+		Fallback();
+	altitudeValue = map(S12ADC_read_AN003(), 204.8, 409.6, 0, 3);
 }
 void Callback_5ms() {
 	if (sonarGetState() == SONAR_TRIGGER) {
@@ -308,7 +311,6 @@ void Callback_5ms() {
 			sonarEchoCountStart();
 			WDT_Reset(&sonarWDT);
 		}
-
 }
 
 static double sonarDistance = 0;
@@ -318,7 +320,9 @@ void Callback_10ms() {
 
 
 void Callback_20ms() {
-	desiredState.key.abs.pos.z = altitudeValue / 1000.0;
+	//desiredState.key.abs.pos.z = altitudeValue / 1000.0;
+	desiredState.key.abs.pos.z = altitudeValue;
+	lcd_buffer_print(LCD_LINE3, "Set: %1.3f", desiredState.key.abs.pos.z);
 
 	/* Setting motor speed based on altitude */
 	lcd_buffer_print(LCD_LINE4, "In: %1.3f", sonarDistance);
@@ -387,6 +391,8 @@ void Fallback() {
 	Servo_Write_deg(SERVO_PITCH, (SERVO_MAX_BOUND_DEG+SERVO_MIN_BOUND_DEG)/2);
 	Servo_Write_deg(SERVO_ROLL, (SERVO_MAX_BOUND_DEG+SERVO_MIN_BOUND_DEG)/2);
 	Servos_Off();
+	while(1)
+		nop();
 }
 
 void Sonar_Fallback() {
