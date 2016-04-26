@@ -1,0 +1,4 @@
+-cpu=rx600
+-output="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\Debug\ADC_OneShot.lib"
+-lang=c99
+-head=runtime,stdio,stdlib

@@ -1,0 +1,5 @@
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_bsp\board\rdkrx63n\lowlvl.src"
+-cpu=rx600
+-debug
+-output="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\Debug\lowlvl.obj"
+-nologo

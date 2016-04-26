@@ -1,0 +1,14 @@
+-cpu=rx600
+-lang=c99
+-include="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_bsp"
+-include="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_glyph"
+-include="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_glyph\src"
+-include="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_glyph\src\glyph"
+-include="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_rspi_rx600"
+-include="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_rspi_rx600\src"
+-include="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\src"
+-output=obj="W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\Debug\r_glyph.obj"
+-debug
+-speed
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_OneShot\ADC_OneShot\r_glyph\src\r_glyph.c"
+-nologo

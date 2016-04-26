@@ -1,0 +1,2123 @@
+Renesas Optimizing Linker (W2.04.00 )             22-Apr-2016 13:04:10
+
+*** Options ***
+
+-subcommand=LinkerSubCommand.tmp
+-input="./src/S12ADC.obj"
+-input="./src/main.obj"
+-input="./src/LowLevelDrivers/MTU2a/MTU_C3.obj"
+-input="./src/LowLevelDrivers/MTU2a/MTU_C4.obj"
+-input="./src/LowLevelDrivers/MTU2a/MTU_C5.obj"
+-input="./src/LowLevelDrivers/CMT.obj"
+-input="./src/LowLevelDrivers/I2C.obj"
+-input="./src/Ducted_Drivers/AHRS.obj"
+-input="./src/Ducted_Drivers/AHRS_Mahony.obj"
+-input="./src/Ducted_Drivers/AverageFilter.obj"
+-input="./src/Ducted_Drivers/HMC5883L.obj"
+-input="./src/Ducted_Drivers/IMU_write_read.obj"
+-input="./src/Ducted_Drivers/Kalman.obj"
+-input="./src/Ducted_Drivers/MPU6050.obj"
+-input="./src/Ducted_Drivers/MS5611-01BA01.obj"
+-input="./src/Ducted_Drivers/Motor.obj"
+-input="./src/Ducted_Drivers/PID.obj"
+-input="./src/Ducted_Drivers/Servo.obj"
+-input="./src/Ducted_Drivers/Sonar.obj"
+-input="./src/Ducted_Drivers/WatchDogTimer.obj"
+-input="./r_rspi_rx600/src/r_rspi_rx600.obj"
+-input="./r_riic_rx600/src/r_riic_rx600.obj"
+-input="./r_riic_rx600/src/r_riic_rx600_master.obj"
+-input="./r_glyph/src/r_glyph.obj"
+-input="./r_glyph/src/r_glyph_register.obj"
+-input="./r_glyph/src/glyph/glyph.obj"
+-input="./r_glyph/src/glyph/fonts/font_8x8.obj"
+-input="./r_glyph/src/glyph/drivers/st7579_lcd.obj"
+-input="./r_bsp/board/rdkrx63n/lowlvl.obj"
+-input="./r_bsp/board/rdkrx63n/dbsct.obj"
+-input="./r_bsp/board/rdkrx63n/flash_options.obj"
+-input="./r_bsp/board/rdkrx63n/hwsetup.obj"
+-input="./r_bsp/board/rdkrx63n/lcd.obj"
+-input="./r_bsp/board/rdkrx63n/lowsrc.obj"
+-input="./r_bsp/board/rdkrx63n/resetprg.obj"
+-input="./r_bsp/board/rdkrx63n/sbrk.obj"
+-input="./r_bsp/board/rdkrx63n/vecttbl.obj"
+-start=SI,SU,B_1,R_1,B_2,R_2,B,R/0,C_1,C_2,C,C$*,L*,D*,P,W*/0FFF80000,FIXEDVECT/0FFFFFF90
+-library=C:\Renesas\E2_STU~1\WORKSP~1\DUCTED~2\Debug\ADC_OneShot.lib
+-noprelink
+-list=ADC_OneShot.map
+-show
+-nooptimize
+-debug
+-output=C:\Renesas\e2_studio\Workspace\Ducted_Fan\Debug\ADC_OneShot.abs
+-nocompress
+-nologo
+-nomessage
+-rom=D=R,D_1=R_1,D_2=R_2
+-vect=_undefined_interrupt_source_isr
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SI
+                                  00000000  000003ff       400   4
+SU
+                                  00000400  000013ff      1000   4
+B_1
+                                  00001400  00001495        96   1
+R_1
+                                  00001496  00001501        6c   1
+B_2
+                                  00001502  00001503         2   2
+R_2
+                                  00001504  00001513        10   2
+B
+                                  00001514  0000225b       d48   4
+R
+                                  0000225c  00002997       73c   4
+$ADDR_C_FF7FFFE8
+                                  ff7fffe8  ff7fffff        18   1
+C_1
+                                  fff80000  fff80ad1       ad2   1
+C_2
+                                  fff80ad2  fff80cd3       202   2
+C
+                                  fff80cd4  fff80edf       20c   4
+C$DSEC
+                                  fff80ee0  fff80f03        24   4
+C$BSEC
+                                  fff80f04  fff80f1b        18   4
+C$VECT
+                                  fff80f1c  fff8131b       400   4
+L
+                                  fff8131c  fff814c8       1ad   4
+D
+                                  fff814cc  fff81c07       73c   4
+D_1
+                                  fff81c08  fff81c73        6c   1
+D_2
+                                  fff81c74  fff81c83        10   2
+P
+                                  fff81c84  fff8a0d0      844d   1
+W
+                                  fff8a0d4  fff8a0d4         0   4
+W_1
+                                  fff8a0d4  fff8a0f7        24   1
+W_2
+                                  fff8a0f8  fff8a14d        56   2
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff8f        10   1
+FIXEDVECT
+                                  ffffff90  ffffffff        70   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SI
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  00000000  000003ff       400
+
+SECTION=SU
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  00000400  000013ff      1000
+
+SECTION=B_1
+FILE=.\src\main.obj
+                                  00001400  0000145f        60
+  _lcd_buffer
+                                  00001400        60   data ,l         3
+FILE=.\src\LowLevelDrivers\CMT.obj
+                                  00001460  00001467         8
+  _timers
+                                  00001460         8   data ,g         2
+FILE=.\src\Ducted_Drivers\MS5611-01BA01.obj
+                                  00001468  0000146d         6
+  _Buffer_Rx1
+                                  00001468         3   data ,g         3
+  _Buffer_Tx1
+                                  0000146b         1   data ,g         3
+  _Buffer_Rx2
+                                  0000146c         1   data ,g         0
+  _Buffer_Tx2
+                                  0000146d         1   data ,g         1
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  0000146e  00001495        28
+  _flmod
+                                  0000146e        14   data ,g         5
+  _sml_buf
+                                  00001482        14   data ,g         0
+
+SECTION=R_1
+FILE=.\src\Ducted_Drivers\HMC5883L.obj
+                                  00001496  000014a3         e
+  _ENABLE_REG
+                                  00001496         1   data ,g         1
+  _DISABLE_REG
+                                  00001497         1   data ,g         0
+  _CONFIG_6A
+                                  00001498         1   data ,g         1
+  _CONFIG_MST_CTR
+                                  00001499         1   data ,g         1
+  _CONFIG_SLV0_ADDR_R
+                                  0000149a         1   data ,g         1
+  _CONFIG_SLV0_ADDR_W
+                                  0000149b         1   data ,g         2
+  _CONFIG_SLV0_REG_DATA
+                                  0000149c         1   data ,g         1
+  _CONFIG_SLV0_CTRL_1
+                                  0000149d         1   data ,g         2
+  _CONFIG_SLV0_CTRL_2
+                                  0000149e         1   data ,g         1
+  _CONFIG_SLV0_CTRL_Enable
+                                  0000149f         1   data ,g         2
+  _CONFIG_INT_PIN_CFG
+                                  000014a0         1   data ,g         0
+  _CONFIG_REG_A
+                                  000014a1         1   data ,g         1
+  _CONFIG_REG_B
+                                  000014a2         1   data ,g         1
+  _CONFIG_MODE_REG
+                                  000014a3         1   data ,g         1
+FILE=.\src\Ducted_Drivers\MPU6050.obj
+                                  000014a4  000014a9         6
+  _DISABLE
+                                  000014a4         1   data ,g         1
+  _INITIAL
+                                  000014a5         1   data ,g         1
+  _ENABLE
+                                  000014a6         1   data ,g         1
+  _RATE_1000
+                                  000014a7         1   data ,g         1
+  _D_GYRO_SELF_TEST
+                                  000014a8         1   data ,g         1
+  _GYRO_CLOCK
+                                  000014a9         1   data ,g         1
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  000014aa  000014ac         3
+  _rspi_initialized
+                                  000014aa         3   data ,l         1
+FILE=.\r_riic_rx600\src\r_riic_rx600.obj
+                                  000014ad  000014b0         4
+  _g_riic_locked
+                                  000014ad         2   data ,l         5
+  _riic_initialized
+                                  000014af         2   data ,l         2
+FILE=xfiles
+                                  000014b1  00001500        50
+  _ebuf
+                                  000014b1        50   data ,l         5
+FILE=xstate
+                                  00001501  00001501         1
+  __Mbcurmax
+                                  00001501         1   data ,g         1
+
+SECTION=B_2
+FILE=.\src\main.obj
+                                  00001502  00001503         2
+  _analogRead
+                                  00001502         2   data ,g         3
+
+SECTION=R_2
+FILE=.\src\Ducted_Drivers\Sonar.obj
+                                  00001504  00001505         2
+  _sonar_echo_count
+                                  00001504         2   data ,l         3
+FILE=sqrtf
+                                  00001506  00001513         e
+  _cf1S
+                                  00001506         e   data ,l         1
+
+SECTION=B
+FILE=.\src\main.obj
+                                  00001514  00001d53       840
+  _desiredState
+                                  00001514       310   data ,g         2
+  _currentState
+                                  00001824       310   data ,g         1
+  _z_axis_PID
+                                  00001b34        20   data ,g         2
+  _Pitch_PID
+                                  00001b54        20   data ,g         2
+  _Roll_PID
+                                  00001b74        20   data ,g         2
+  _pitchAVG
+                                  00001b94        cc   data ,g         2
+  _rollAVG
+                                  00001c60        cc   data ,g         2
+  _outValue
+                                  00001d2c         4   data ,g         1
+  _altitudeValue
+                                  00001d30         4   data ,g         2
+  _sonarWDT
+                                  00001d34        10   data ,g         4
+  _mainWDT
+                                  00001d44        10   data ,g         3
+FILE=.\src\Ducted_Drivers\Kalman.obj
+                                  00001d54  00001de3        90
+  _pitchKalman
+                                  00001d54         4   data ,g         2
+  _rollKalman
+                                  00001d58         4   data ,g         2
+  _yawKalman
+                                  00001d5c         4   data ,g         1
+  _kalman1
+                                  00001d60        2c   data ,g         1
+  _kalman2
+                                  00001d8c        2c   data ,g         1
+  _kalman3
+                                  00001db8        2c   data ,g         1
+FILE=.\src\Ducted_Drivers\MS5611-01BA01.obj
+                                  00001de4  00001e03        20
+  _C
+                                  00001de4        20   data ,g         2
+FILE=.\r_bsp\board\rdkrx63n\lcd.obj
+                                  00001e04  00001e07         4
+  _lcd_handle
+                                  00001e04         4   data ,g         3
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  00001e08  00001e57        50
+  __Files
+                                  00001e08        50   data ,g         4
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  00001e58  00002257       400
+  _heap_area
+                                  00001e58       400   data ,l         2
+FILE=_errno
+                                  00002258  0000225b         4
+  __errno
+                                  00002258         4   data ,g         a
+
+SECTION=R
+FILE=.\src\main.obj
+                                  0000225c  00002263         8
+  _dt
+                                  0000225c         4   data ,g         2
+  _sonarDistance
+                                  00002260         4   data ,l         3
+FILE=.\src\LowLevelDrivers\CMT.obj
+                                  00002264  00002267         4
+  _general_timer_mS
+                                  00002264         4   data ,g         3
+FILE=.\src\Ducted_Drivers\AHRS.obj
+                                  00002268  0000227b        14
+  _q0
+                                  00002268         4   data ,l         8
+  _q1
+                                  0000226c         4   data ,l         8
+  _q2
+                                  00002270         4   data ,l         8
+  _q3
+                                  00002274         4   data ,l         8
+  _beta
+                                  00002278         4   data ,g         3
+FILE=.\src\Ducted_Drivers\AHRS_Mahony.obj
+                                  0000227c  0000229f        24
+  _q0
+                                  0000227c         4   data ,g         7
+  _q1
+                                  00002280         4   data ,g         9
+  _q2
+                                  00002284         4   data ,g         7
+  _q3
+                                  00002288         4   data ,g         7
+  _twoKp
+                                  0000228c         4   data ,g         3
+  _twoKi
+                                  00002290         4   data ,g         3
+  _integralFBx
+                                  00002294         4   data ,g         6
+  _integralFBy
+                                  00002298         4   data ,g         6
+  _integralFBz
+                                  0000229c         4   data ,g         6
+FILE=.\src\Ducted_Drivers\HMC5883L.obj
+                                  000022a0  000022af        10
+  _MAG_XOUT_OFFSET
+                                  000022a0         4   data ,l         1
+  _MAG_YOUT_OFFSET
+                                  000022a4         4   data ,l         1
+  _MAG_ZOUT_OFFSET
+                                  000022a8         4   data ,l         1
+  _HMC5883L_MG_PER_DIGIT
+                                  000022ac         4   data ,l         1
+FILE=.\src\Ducted_Drivers\MPU6050.obj
+                                  000022b0  000022bf        10
+  _GYRO_XOUT_OFFSET
+                                  000022b0         4   data ,l         3
+  _GYRO_YOUT_OFFSET
+                                  000022b4         4   data ,l         3
+  _GYRO_ZOUT_OFFSET
+                                  000022b8         4   data ,l         3
+  _OFFSET_ERROR
+                                  000022bc         4   data ,l         1
+FILE=.\src\Ducted_Drivers\Sonar.obj
+                                  000022c0  000022c3         4
+  _sonar_state
+                                  000022c0         4   data ,l         7
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  000022c4  000022df        1c
+  _g_rspi_locked_id
+                                  000022c4         c   data ,l         9
+  _rspi_semaphore
+                                  000022d0         4   data ,l         1
+  _g_rspi_channels
+                                  000022d4         c   data ,g         5
+FILE=.\r_riic_rx600\src\r_riic_rx600.obj
+                                  000022e0  000022fb        1c
+  _g_riic_channels
+                                  000022e0         8   data ,g        17
+  _g_riic_mode
+                                  000022e8         8   data ,g         4
+  _g_riic_state
+                                  000022f0         8   data ,g         0
+  _riic_semaphore
+                                  000022f8         4   data ,l         2
+FILE=.\r_glyph\src\glyph\fonts\font_8x8.obj
+                                  000022fc  000026fb       400
+  _Font8x8_table
+                                  000022fc       400   data ,g         2
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  000026fc  0000270f        14
+  _env_list
+                                  000026fc        10   data ,g         1
+  _environ
+                                  0000270c         4   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  00002710  00002713         4
+  _brk
+                                  00002710         4   data ,l         1
+FILE=sqrtf
+                                  00002714  00002717         4
+  _nan_value
+                                  00002714         4   data ,l         1
+FILE=xfiles
+                                  00002718  000027ef        d8
+  __Stdin
+                                  00002718        48   data ,g         8
+  __Stdout
+                                  00002760        48   data ,g         9
+  __Stderr
+                                  000027a8        48   data ,g         4
+FILE=malloc
+                                  000027f0  000027f7         8
+  __Aldata
+                                  000027f0         8   data ,g         3
+FILE=sincosfsub
+                                  000027f8  00002833        3c
+  _sinf_coeff
+                                  000027f8        10   data ,l         1
+  _cosf_coeff
+                                  00002808        10   data ,l         1
+  _pi4ptr_table
+                                  00002818         c   data ,l         1
+  _sub_table
+                                  00002824        10   data ,l         1
+FILE=xprintf
+                                  00002834  00002837         4
+  _stderr
+                                  00002834         4   data ,g         0
+FILE=xctype
+                                  00002838  0000283f         8
+  __Ctype
+                                  00002838         4   data ,g         2
+  __Tls_setup__Ctype
+                                  0000283c         4   data ,g         1
+FILE=xstate
+                                  00002840  00002887        48
+  __Tls_setup__Mbcurmax
+                                  00002840         4   data ,g         1
+  __Mbstate
+                                  00002844        40   data ,g         2
+  __Tls_setup__Mbstate
+                                  00002884         4   data ,g         2
+FILE=localeco
+                                  00002888  000028db        54
+  __Locale
+                                  00002888        50   data ,g         1
+  __Tls_setup__Locale
+                                  000028d8         4   data ,g         0
+FILE=xwcstate
+                                  000028dc  0000291f        44
+  __Wcstate
+                                  000028dc        40   data ,g         2
+  __Tls_setup__Wcstate
+                                  0000291c         4   data ,g         2
+FILE=xfvalues
+                                  00002920  00002997        78
+  __FDenorm
+                                  00002920        10   data ,g         0
+  __FEps
+                                  00002930        10   data ,g         0
+  __FHugeval
+                                  00002940        10   data ,g         0
+  __FInf
+                                  00002950        10   data ,g         1
+  __FNan
+                                  00002960        10   data ,g         0
+  __FSnan
+                                  00002970        10   data ,g         0
+  __FRteps
+                                  00002980        10   data ,g         0
+  __FXbig
+                                  00002990         4   data ,g         0
+  __FZero
+                                  00002994         4   data ,g         0
+
+SECTION=$ADDR_C_FF7FFFE8
+FILE=.\r_bsp\board\rdkrx63n\flash_options.obj
+                                  ff7fffe8  ff7fffff        18
+  _user_boot_settings
+                                  ff7fffe8        18   data ,g         0
+
+SECTION=C_1
+FILE=.\r_glyph\src\glyph\fonts\font_8x8.obj
+                                  fff80000  fff809ff       a00
+  _Font8x8_char_0
+                                  fff80000         a   data ,g         1
+  _Font8x8_char_1
+                                  fff8000a         a   data ,g         1
+  _Font8x8_char_2
+                                  fff80014         a   data ,g         1
+  _Font8x8_char_3
+                                  fff8001e         a   data ,g         1
+  _Font8x8_char_4
+                                  fff80028         a   data ,g         1
+  _Font8x8_char_5
+                                  fff80032         a   data ,g         1
+  _Font8x8_char_6
+                                  fff8003c         a   data ,g         1
+  _Font8x8_char_7
+                                  fff80046         a   data ,g         1
+  _Font8x8_char_8
+                                  fff80050         a   data ,g         1
+  _Font8x8_char_9
+                                  fff8005a         a   data ,g         1
+  _Font8x8_char_10
+                                  fff80064         a   data ,g         1
+  _Font8x8_char_11
+                                  fff8006e         a   data ,g         1
+  _Font8x8_char_12
+                                  fff80078         a   data ,g         1
+  _Font8x8_char_13
+                                  fff80082         a   data ,g         1
+  _Font8x8_char_14
+                                  fff8008c         a   data ,g         1
+  _Font8x8_char_15
+                                  fff80096         a   data ,g         1
+  _Font8x8_char_16
+                                  fff800a0         a   data ,g         1
+  _Font8x8_char_17
+                                  fff800aa         a   data ,g         1
+  _Font8x8_char_18
+                                  fff800b4         a   data ,g         1
+  _Font8x8_char_19
+                                  fff800be         a   data ,g         1
+  _Font8x8_char_20
+                                  fff800c8         a   data ,g         1
+  _Font8x8_char_21
+                                  fff800d2         a   data ,g         1
+  _Font8x8_char_22
+                                  fff800dc         a   data ,g         1
+  _Font8x8_char_23
+                                  fff800e6         a   data ,g         1
+  _Font8x8_char_24
+                                  fff800f0         a   data ,g         1
+  _Font8x8_char_25
+                                  fff800fa         a   data ,g         1
+  _Font8x8_char_26
+                                  fff80104         a   data ,g         1
+  _Font8x8_char_27
+                                  fff8010e         a   data ,g         1
+  _Font8x8_char_28
+                                  fff80118         a   data ,g         1
+  _Font8x8_char_29
+                                  fff80122         a   data ,g         1
+  _Font8x8_char_30
+                                  fff8012c         a   data ,g         1
+  _Font8x8_char_31
+                                  fff80136         a   data ,g         1
+  _Font8x8_char_32
+                                  fff80140         a   data ,g         1
+  _Font8x8_char_33
+                                  fff8014a         a   data ,g         1
+  _Font8x8_char_34
+                                  fff80154         a   data ,g         1
+  _Font8x8_char_35
+                                  fff8015e         a   data ,g         1
+  _Font8x8_char_36
+                                  fff80168         a   data ,g         1
+  _Font8x8_char_37
+                                  fff80172         a   data ,g         1
+  _Font8x8_char_38
+                                  fff8017c         a   data ,g         1
+  _Font8x8_char_39
+                                  fff80186         a   data ,g         1
+  _Font8x8_char_40
+                                  fff80190         a   data ,g         1
+  _Font8x8_char_41
+                                  fff8019a         a   data ,g         1
+  _Font8x8_char_42
+                                  fff801a4         a   data ,g         1
+  _Font8x8_char_43
+                                  fff801ae         a   data ,g         1
+  _Font8x8_char_44
+                                  fff801b8         a   data ,g         1
+  _Font8x8_char_45
+                                  fff801c2         a   data ,g         1
+  _Font8x8_char_46
+                                  fff801cc         a   data ,g         1
+  _Font8x8_char_47
+                                  fff801d6         a   data ,g         1
+  _Font8x8_char_48
+                                  fff801e0         a   data ,g         1
+  _Font8x8_char_49
+                                  fff801ea         a   data ,g         1
+  _Font8x8_char_50
+                                  fff801f4         a   data ,g         1
+  _Font8x8_char_51
+                                  fff801fe         a   data ,g         1
+  _Font8x8_char_52
+                                  fff80208         a   data ,g         1
+  _Font8x8_char_53
+                                  fff80212         a   data ,g         1
+  _Font8x8_char_54
+                                  fff8021c         a   data ,g         1
+  _Font8x8_char_55
+                                  fff80226         a   data ,g         1
+  _Font8x8_char_56
+                                  fff80230         a   data ,g         1
+  _Font8x8_char_57
+                                  fff8023a         a   data ,g         1
+  _Font8x8_char_58
+                                  fff80244         a   data ,g         1
+  _Font8x8_char_59
+                                  fff8024e         a   data ,g         1
+  _Font8x8_char_60
+                                  fff80258         a   data ,g         1
+  _Font8x8_char_61
+                                  fff80262         a   data ,g         1
+  _Font8x8_char_62
+                                  fff8026c         a   data ,g         1
+  _Font8x8_char_63
+                                  fff80276         a   data ,g         1
+  _Font8x8_char_64
+                                  fff80280         a   data ,g         1
+  _Font8x8_char_65
+                                  fff8028a         a   data ,g         1
+  _Font8x8_char_66
+                                  fff80294         a   data ,g         1
+  _Font8x8_char_67
+                                  fff8029e         a   data ,g         1
+  _Font8x8_char_68
+                                  fff802a8         a   data ,g         1
+  _Font8x8_char_69
+                                  fff802b2         a   data ,g         1
+  _Font8x8_char_70
+                                  fff802bc         a   data ,g         1
+  _Font8x8_char_71
+                                  fff802c6         a   data ,g         1
+  _Font8x8_char_72
+                                  fff802d0         a   data ,g         1
+  _Font8x8_char_73
+                                  fff802da         a   data ,g         1
+  _Font8x8_char_74
+                                  fff802e4         a   data ,g         1
+  _Font8x8_char_75
+                                  fff802ee         a   data ,g         1
+  _Font8x8_char_76
+                                  fff802f8         a   data ,g         1
+  _Font8x8_char_77
+                                  fff80302         a   data ,g         1
+  _Font8x8_char_78
+                                  fff8030c         a   data ,g         1
+  _Font8x8_char_79
+                                  fff80316         a   data ,g         1
+  _Font8x8_char_80
+                                  fff80320         a   data ,g         1
+  _Font8x8_char_81
+                                  fff8032a         a   data ,g         1
+  _Font8x8_char_82
+                                  fff80334         a   data ,g         1
+  _Font8x8_char_83
+                                  fff8033e         a   data ,g         1
+  _Font8x8_char_84
+                                  fff80348         a   data ,g         1
+  _Font8x8_char_85
+                                  fff80352         a   data ,g         1
+  _Font8x8_char_86
+                                  fff8035c         a   data ,g         1
+  _Font8x8_char_87
+                                  fff80366         a   data ,g         1
+  _Font8x8_char_88
+                                  fff80370         a   data ,g         1
+  _Font8x8_char_89
+                                  fff8037a         a   data ,g         1
+  _Font8x8_char_90
+                                  fff80384         a   data ,g         1
+  _Font8x8_char_91
+                                  fff8038e         a   data ,g         1
+  _Font8x8_char_92
+                                  fff80398         a   data ,g         1
+  _Font8x8_char_93
+                                  fff803a2         a   data ,g         1
+  _Font8x8_char_94
+                                  fff803ac         a   data ,g         1
+  _Font8x8_char_95
+                                  fff803b6         a   data ,g         1
+  _Font8x8_char_96
+                                  fff803c0         a   data ,g         1
+  _Font8x8_char_97
+                                  fff803ca         a   data ,g         1
+  _Font8x8_char_98
+                                  fff803d4         a   data ,g         1
+  _Font8x8_char_99
+                                  fff803de         a   data ,g         1
+  _Font8x8_char_100
+                                  fff803e8         a   data ,g         1
+  _Font8x8_char_101
+                                  fff803f2         a   data ,g         1
+  _Font8x8_char_102
+                                  fff803fc         a   data ,g         1
+  _Font8x8_char_103
+                                  fff80406         a   data ,g         1
+  _Font8x8_char_104
+                                  fff80410         a   data ,g         1
+  _Font8x8_char_105
+                                  fff8041a         a   data ,g         1
+  _Font8x8_char_106
+                                  fff80424         a   data ,g         1
+  _Font8x8_char_107
+                                  fff8042e         a   data ,g         1
+  _Font8x8_char_108
+                                  fff80438         a   data ,g         1
+  _Font8x8_char_109
+                                  fff80442         a   data ,g         1
+  _Font8x8_char_110
+                                  fff8044c         a   data ,g         1
+  _Font8x8_char_111
+                                  fff80456         a   data ,g         1
+  _Font8x8_char_112
+                                  fff80460         a   data ,g         1
+  _Font8x8_char_113
+                                  fff8046a         a   data ,g         1
+  _Font8x8_char_114
+                                  fff80474         a   data ,g         1
+  _Font8x8_char_115
+                                  fff8047e         a   data ,g         1
+  _Font8x8_char_116
+                                  fff80488         a   data ,g         1
+  _Font8x8_char_117
+                                  fff80492         a   data ,g         1
+  _Font8x8_char_118
+                                  fff8049c         a   data ,g         1
+  _Font8x8_char_119
+                                  fff804a6         a   data ,g         1
+  _Font8x8_char_120
+                                  fff804b0         a   data ,g         1
+  _Font8x8_char_121
+                                  fff804ba         a   data ,g         1
+  _Font8x8_char_122
+                                  fff804c4         a   data ,g         1
+  _Font8x8_char_123
+                                  fff804ce         a   data ,g         1
+  _Font8x8_char_124
+                                  fff804d8         a   data ,g         1
+  _Font8x8_char_125
+                                  fff804e2         a   data ,g         1
+  _Font8x8_char_126
+                                  fff804ec         a   data ,g         1
+  _Font8x8_char_127
+                                  fff804f6         a   data ,g         1
+  _Font8x8_char_128
+                                  fff80500         a   data ,g         1
+  _Font8x8_char_129
+                                  fff8050a         a   data ,g         1
+  _Font8x8_char_130
+                                  fff80514         a   data ,g         1
+  _Font8x8_char_131
+                                  fff8051e         a   data ,g         1
+  _Font8x8_char_132
+                                  fff80528         a   data ,g         1
+  _Font8x8_char_133
+                                  fff80532         a   data ,g         1
+  _Font8x8_char_134
+                                  fff8053c         a   data ,g         1
+  _Font8x8_char_135
+                                  fff80546         a   data ,g         1
+  _Font8x8_char_136
+                                  fff80550         a   data ,g         1
+  _Font8x8_char_137
+                                  fff8055a         a   data ,g         1
+  _Font8x8_char_138
+                                  fff80564         a   data ,g         1
+  _Font8x8_char_139
+                                  fff8056e         a   data ,g         1
+  _Font8x8_char_140
+                                  fff80578         a   data ,g         1
+  _Font8x8_char_141
+                                  fff80582         a   data ,g         1
+  _Font8x8_char_142
+                                  fff8058c         a   data ,g         1
+  _Font8x8_char_143
+                                  fff80596         a   data ,g         1
+  _Font8x8_char_144
+                                  fff805a0         a   data ,g         1
+  _Font8x8_char_145
+                                  fff805aa         a   data ,g         1
+  _Font8x8_char_146
+                                  fff805b4         a   data ,g         1
+  _Font8x8_char_147
+                                  fff805be         a   data ,g         1
+  _Font8x8_char_148
+                                  fff805c8         a   data ,g         1
+  _Font8x8_char_149
+                                  fff805d2         a   data ,g         1
+  _Font8x8_char_150
+                                  fff805dc         a   data ,g         1
+  _Font8x8_char_151
+                                  fff805e6         a   data ,g         1
+  _Font8x8_char_152
+                                  fff805f0         a   data ,g         1
+  _Font8x8_char_153
+                                  fff805fa         a   data ,g         1
+  _Font8x8_char_154
+                                  fff80604         a   data ,g         1
+  _Font8x8_char_155
+                                  fff8060e         a   data ,g         1
+  _Font8x8_char_156
+                                  fff80618         a   data ,g         1
+  _Font8x8_char_157
+                                  fff80622         a   data ,g         1
+  _Font8x8_char_158
+                                  fff8062c         a   data ,g         1
+  _Font8x8_char_159
+                                  fff80636         a   data ,g         1
+  _Font8x8_char_160
+                                  fff80640         a   data ,g         1
+  _Font8x8_char_161
+                                  fff8064a         a   data ,g         1
+  _Font8x8_char_162
+                                  fff80654         a   data ,g         1
+  _Font8x8_char_163
+                                  fff8065e         a   data ,g         1
+  _Font8x8_char_164
+                                  fff80668         a   data ,g         1
+  _Font8x8_char_165
+                                  fff80672         a   data ,g         1
+  _Font8x8_char_166
+                                  fff8067c         a   data ,g         1
+  _Font8x8_char_167
+                                  fff80686         a   data ,g         1
+  _Font8x8_char_168
+                                  fff80690         a   data ,g         1
+  _Font8x8_char_169
+                                  fff8069a         a   data ,g         1
+  _Font8x8_char_170
+                                  fff806a4         a   data ,g         1
+  _Font8x8_char_171
+                                  fff806ae         a   data ,g         1
+  _Font8x8_char_172
+                                  fff806b8         a   data ,g         1
+  _Font8x8_char_173
+                                  fff806c2         a   data ,g         1
+  _Font8x8_char_174
+                                  fff806cc         a   data ,g         1
+  _Font8x8_char_175
+                                  fff806d6         a   data ,g         1
+  _Font8x8_char_176
+                                  fff806e0         a   data ,g         1
+  _Font8x8_char_177
+                                  fff806ea         a   data ,g         1
+  _Font8x8_char_178
+                                  fff806f4         a   data ,g         1
+  _Font8x8_char_179
+                                  fff806fe         a   data ,g         1
+  _Font8x8_char_180
+                                  fff80708         a   data ,g         1
+  _Font8x8_char_181
+                                  fff80712         a   data ,g         1
+  _Font8x8_char_182
+                                  fff8071c         a   data ,g         1
+  _Font8x8_char_183
+                                  fff80726         a   data ,g         1
+  _Font8x8_char_184
+                                  fff80730         a   data ,g         1
+  _Font8x8_char_185
+                                  fff8073a         a   data ,g         1
+  _Font8x8_char_186
+                                  fff80744         a   data ,g         1
+  _Font8x8_char_187
+                                  fff8074e         a   data ,g         1
+  _Font8x8_char_188
+                                  fff80758         a   data ,g         1
+  _Font8x8_char_189
+                                  fff80762         a   data ,g         1
+  _Font8x8_char_190
+                                  fff8076c         a   data ,g         1
+  _Font8x8_char_191
+                                  fff80776         a   data ,g         1
+  _Font8x8_char_192
+                                  fff80780         a   data ,g         1
+  _Font8x8_char_193
+                                  fff8078a         a   data ,g         1
+  _Font8x8_char_194
+                                  fff80794         a   data ,g         1
+  _Font8x8_char_195
+                                  fff8079e         a   data ,g         1
+  _Font8x8_char_196
+                                  fff807a8         a   data ,g         1
+  _Font8x8_char_197
+                                  fff807b2         a   data ,g         1
+  _Font8x8_char_198
+                                  fff807bc         a   data ,g         1
+  _Font8x8_char_199
+                                  fff807c6         a   data ,g         1
+  _Font8x8_char_200
+                                  fff807d0         a   data ,g         1
+  _Font8x8_char_201
+                                  fff807da         a   data ,g         1
+  _Font8x8_char_202
+                                  fff807e4         a   data ,g         1
+  _Font8x8_char_203
+                                  fff807ee         a   data ,g         1
+  _Font8x8_char_204
+                                  fff807f8         a   data ,g         1
+  _Font8x8_char_205
+                                  fff80802         a   data ,g         1
+  _Font8x8_char_206
+                                  fff8080c         a   data ,g         1
+  _Font8x8_char_207
+                                  fff80816         a   data ,g         1
+  _Font8x8_char_208
+                                  fff80820         a   data ,g         1
+  _Font8x8_char_209
+                                  fff8082a         a   data ,g         1
+  _Font8x8_char_210
+                                  fff80834         a   data ,g         1
+  _Font8x8_char_211
+                                  fff8083e         a   data ,g         1
+  _Font8x8_char_212
+                                  fff80848         a   data ,g         1
+  _Font8x8_char_213
+                                  fff80852         a   data ,g         1
+  _Font8x8_char_214
+                                  fff8085c         a   data ,g         1
+  _Font8x8_char_215
+                                  fff80866         a   data ,g         1
+  _Font8x8_char_216
+                                  fff80870         a   data ,g         1
+  _Font8x8_char_217
+                                  fff8087a         a   data ,g         1
+  _Font8x8_char_218
+                                  fff80884         a   data ,g         1
+  _Font8x8_char_219
+                                  fff8088e         a   data ,g         1
+  _Font8x8_char_220
+                                  fff80898         a   data ,g         1
+  _Font8x8_char_221
+                                  fff808a2         a   data ,g         1
+  _Font8x8_char_222
+                                  fff808ac         a   data ,g         1
+  _Font8x8_char_223
+                                  fff808b6         a   data ,g         1
+  _Font8x8_char_224
+                                  fff808c0         a   data ,g         1
+  _Font8x8_char_225
+                                  fff808ca         a   data ,g         1
+  _Font8x8_char_226
+                                  fff808d4         a   data ,g         1
+  _Font8x8_char_227
+                                  fff808de         a   data ,g         1
+  _Font8x8_char_228
+                                  fff808e8         a   data ,g         1
+  _Font8x8_char_229
+                                  fff808f2         a   data ,g         1
+  _Font8x8_char_230
+                                  fff808fc         a   data ,g         1
+  _Font8x8_char_231
+                                  fff80906         a   data ,g         1
+  _Font8x8_char_232
+                                  fff80910         a   data ,g         1
+  _Font8x8_char_233
+                                  fff8091a         a   data ,g         1
+  _Font8x8_char_234
+                                  fff80924         a   data ,g         1
+  _Font8x8_char_235
+                                  fff8092e         a   data ,g         1
+  _Font8x8_char_236
+                                  fff80938         a   data ,g         1
+  _Font8x8_char_237
+                                  fff80942         a   data ,g         1
+  _Font8x8_char_238
+                                  fff8094c         a   data ,g         1
+  _Font8x8_char_239
+                                  fff80956         a   data ,g         1
+  _Font8x8_char_240
+                                  fff80960         a   data ,g         1
+  _Font8x8_char_241
+                                  fff8096a         a   data ,g         1
+  _Font8x8_char_242
+                                  fff80974         a   data ,g         1
+  _Font8x8_char_243
+                                  fff8097e         a   data ,g         1
+  _Font8x8_char_244
+                                  fff80988         a   data ,g         1
+  _Font8x8_char_245
+                                  fff80992         a   data ,g         1
+  _Font8x8_char_246
+                                  fff8099c         a   data ,g         1
+  _Font8x8_char_247
+                                  fff809a6         a   data ,g         1
+  _Font8x8_char_248
+                                  fff809b0         a   data ,g         1
+  _Font8x8_char_249
+                                  fff809ba         a   data ,g         1
+  _Font8x8_char_250
+                                  fff809c4         a   data ,g         1
+  _Font8x8_char_251
+                                  fff809ce         a   data ,g         1
+  _Font8x8_char_252
+                                  fff809d8         a   data ,g         1
+  _Font8x8_char_253
+                                  fff809e2         a   data ,g         1
+  _Font8x8_char_254
+                                  fff809ec         a   data ,g         1
+  _Font8x8_char_255
+                                  fff809f6         a   data ,g         1
+FILE=xprintf
+                                  fff80a00  fff80a09         a
+  _fchar$1
+                                  fff80a00         a   data ,l         1
+FILE=xputtxt
+                                  fff80a0a  fff80aae        a5
+  _spaces
+                                  fff80a0a        21   data ,l         1
+  _zeroes
+                                  fff80a2b        21   data ,l         1
+  _asterisk
+                                  fff80a4c        21   data ,l         1
+  _plus
+                                  fff80a6d        21   data ,l         1
+  _minus
+                                  fff80a8e        21   data ,l         1
+FILE=xlitob
+                                  fff80aaf  fff80ad0        22
+  _ldigs
+                                  fff80aaf        11   data ,l         1
+  _udigs
+                                  fff80ac0        11   data ,l         1
+FILE=localeco
+                                  fff80ad1  fff80ad1         1
+  _null
+                                  fff80ad1         1   data ,l         d
+
+SECTION=C_2
+FILE=xctype
+                                  fff80ad2  fff80cd3       202
+  _ctyp_tab
+                                  fff80ad2       202   data ,l         1
+
+SECTION=C
+FILE=.\src\Ducted_Drivers\Kalman.obj
+                                  fff80cd4  fff80cdf         c
+  _Q_angle
+                                  fff80cd4         4   data ,g         0
+  _Q_bias
+                                  fff80cd8         4   data ,g         0
+  _R_measure
+                                  fff80cdc         4   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff80ce0  fff80cf7        18
+  __CTBL
+                                  fff80ce0        18   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff80cf8  fff80cfb         4
+  __nfiles
+                                  fff80cf8         4   data ,g         3
+FILE=atanf
+                                  fff80cfc  fff80d13        18
+  _const_tbl
+                                  fff80cfc        18   data ,l         1
+FILE=asincosfsub
+                                  fff80d14  fff80d3f        2c
+  ___asincosf_const_tbl
+                                  fff80d14         8   data ,g         1
+  ___asinf_coeff
+                                  fff80d1c        24   data ,g         1
+FILE=xfoprep
+                                  fff80d40  fff80d87        48
+  _init$1
+                                  fff80d40        48   data ,l         1
+FILE=xprintf
+                                  fff80d88  fff80d9f        18
+  _fbit$2
+                                  fff80d88        18   data ,l         1
+FILE=_sbrk_si
+                                  fff80da0  fff80da3         4
+  __sbrk_size
+                                  fff80da0         4   data ,g         1
+FILE=_in_exps
+                                  fff80da4  fff80ddb        38
+  _exp_lcoef$2
+                                  fff80da4        1c   data ,l         1
+  _exp_hcoef$1
+                                  fff80dc0        1c   data ,l         1
+FILE=_in_logs
+                                  fff80ddc  fff80dfb        20
+  _log_coef$3
+                                  fff80ddc        20   data ,l         1
+FILE=consts
+                                  fff80dfc  fff80e53        58
+  __IFZEROS
+                                  fff80dfc         4   data ,g         5
+  __IFONES
+                                  fff80e00         4   data ,g         4
+  __HALFS
+                                  fff80e04         4   data ,g         1
+  __QUOTS
+                                  fff80e08         4   data ,g         0
+  __TWOS
+                                  fff80e0c         4   data ,g         0
+  __FOURS
+                                  fff80e10         4   data ,g         0
+  __PAIS
+                                  fff80e14         4   data ,g         1
+  __2PAIS
+                                  fff80e18         4   data ,g         0
+  __HLFPAIS
+                                  fff80e1c         4   data ,g         1
+  __QUOPAIS
+                                  fff80e20         4   data ,g         1
+  __LOGE2S
+                                  fff80e24         4   data ,g         2
+  __NIFZEROS
+                                  fff80e28         4   data ,g         1
+  __NIFONES
+                                  fff80e2c         4   data ,g         2
+  __NHALFS
+                                  fff80e30         4   data ,g         1
+  __NQUOTS
+                                  fff80e34         4   data ,g         1
+  __NTWOS
+                                  fff80e38         4   data ,g         0
+  __NFOURS
+                                  fff80e3c         4   data ,g         0
+  __NPAIS
+                                  fff80e40         4   data ,g         1
+  __N2PAIS
+                                  fff80e44         4   data ,g         0
+  __NHLFPAIS
+                                  fff80e48         4   data ,g         0
+  __NQUOPAIS
+                                  fff80e4c         4   data ,g         0
+  __NLOGE2S
+                                  fff80e50         4   data ,g         0
+FILE=_const
+                                  fff80e54  fff80e77        24
+  __IFNAND
+                                  fff80e54         0   none ,g         0
+  __IFINFD
+                                  fff80e5c         0   none ,g         0
+  __NIFINFD
+                                  fff80e64         0   none ,g         0
+  __IFNANS
+                                  fff80e6c         0   none ,g         6
+  __IFINFS
+                                  fff80e70         0   none ,g         3
+  __NIFINFS
+                                  fff80e74         0   none ,g         2
+FILE=xfopen
+                                  fff80e78  fff80e87        10
+  _rwacc$1
+                                  fff80e78        10   data ,l         1
+FILE=_a_atans
+                                  fff80e88  fff80e9f        18
+  _atan_coef$1
+                                  fff80e88        18   data ,l         1
+FILE=xldtob
+                                  fff80ea0  fff80eb7        18
+  _pows
+                                  fff80ea0        18   data ,l         1
+FILE=floatval
+                                  fff80eb8  fff80edf        28
+  __FLT_MAX_VAL
+                                  fff80eb8         0   none ,g         1
+  __FLT_MIN_VAL
+                                  fff80ebc         0   none ,g         0
+  __DBL_MAX_VAL
+                                  fff80ec0         0   none ,g         0
+  __DBL_MIN_VAL
+                                  fff80ec8         0   none ,g         0
+  __LDBL_MAX_VAL
+                                  fff80ed0         0   none ,g         0
+  __LDBL_MIN_VAL
+                                  fff80ed8         0   none ,g         0
+
+SECTION=C$DSEC
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff80ee0  fff80f03        24
+  __DTBL
+                                  fff80ee0        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff80f04  fff80f1b        18
+  __BTBL
+                                  fff80f04        18   data ,g         0
+
+SECTION=C$VECT
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  fff80f1c  fff8131b       400
+
+SECTION=L
+FILE=.\src\main.obj
+                                  fff8131c  fff81356        3b
+FILE=.\src\Ducted_Drivers\MPU6050.obj
+                                  fff81358  fff813cb        74
+FILE=.\src\Ducted_Drivers\MS5611-01BA01.obj
+                                  fff813cc  fff8140f        44
+FILE=.\r_glyph\src\glyph\glyph.obj
+                                  fff81410  fff81441        32
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff81444  fff81447         4
+  _deadSpace
+                                  fff81444         4   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff81448  fff81489        42
+FILE=xprintf
+                                  fff8148c  fff81492         7
+FILE=xldtob
+                                  fff81494  fff814b5        22
+FILE=xgenld
+                                  fff814b8  fff814b9         2
+FILE=localeco
+                                  fff814bc  fff814c8         d
+
+SECTION=D
+FILE=.\src\main.obj
+                                  fff814cc  fff814d3         8
+FILE=.\src\LowLevelDrivers\CMT.obj
+                                  fff814d4  fff814d7         4
+FILE=.\src\Ducted_Drivers\AHRS.obj
+                                  fff814d8  fff814eb        14
+FILE=.\src\Ducted_Drivers\AHRS_Mahony.obj
+                                  fff814ec  fff8150f        24
+FILE=.\src\Ducted_Drivers\HMC5883L.obj
+                                  fff81510  fff8151f        10
+FILE=.\src\Ducted_Drivers\MPU6050.obj
+                                  fff81520  fff8152f        10
+FILE=.\src\Ducted_Drivers\Sonar.obj
+                                  fff81530  fff81533         4
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  fff81534  fff8154f        1c
+FILE=.\r_riic_rx600\src\r_riic_rx600.obj
+                                  fff81550  fff8156b        1c
+FILE=.\r_glyph\src\glyph\fonts\font_8x8.obj
+                                  fff8156c  fff8196b       400
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff8196c  fff8197f        14
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  fff81980  fff81983         4
+FILE=sqrtf
+                                  fff81984  fff81987         4
+FILE=xfiles
+                                  fff81988  fff81a5f        d8
+FILE=malloc
+                                  fff81a60  fff81a67         8
+FILE=sincosfsub
+                                  fff81a68  fff81aa3        3c
+FILE=xprintf
+                                  fff81aa4  fff81aa7         4
+FILE=xctype
+                                  fff81aa8  fff81aaf         8
+FILE=xstate
+                                  fff81ab0  fff81af7        48
+FILE=localeco
+                                  fff81af8  fff81b4b        54
+FILE=xwcstate
+                                  fff81b4c  fff81b8f        44
+FILE=xfvalues
+                                  fff81b90  fff81c07        78
+
+SECTION=D_1
+FILE=.\src\Ducted_Drivers\HMC5883L.obj
+                                  fff81c08  fff81c15         e
+FILE=.\src\Ducted_Drivers\MPU6050.obj
+                                  fff81c16  fff81c1b         6
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  fff81c1c  fff81c1e         3
+FILE=.\r_riic_rx600\src\r_riic_rx600.obj
+                                  fff81c1f  fff81c22         4
+FILE=xfiles
+                                  fff81c23  fff81c72        50
+FILE=xstate
+                                  fff81c73  fff81c73         1
+
+SECTION=D_2
+FILE=.\src\Ducted_Drivers\Sonar.obj
+                                  fff81c74  fff81c75         2
+FILE=sqrtf
+                                  fff81c76  fff81c83         e
+
+SECTION=P
+FILE=.\src\S12ADC.obj
+                                  fff81c84  fff81cea        67
+  _S12ADC_init
+                                  fff81c84        4a   func ,g         1
+  _S12ADC_start
+                                  fff81cce         8   func ,g         2
+  _S12ADC_conversion_complete
+                                  fff81cd6         d   func ,g         2
+  _S12ADC_read
+                                  fff81ce3         8   func ,g         2
+FILE=.\src\main.obj
+                                  fff81ceb  fff82242       558
+  _map
+                                  fff81ceb        15   func ,g         0
+  _lcd_buffer_print
+                                  fff81d00        3c   func ,g         3
+  _lcd_buffer_clear
+                                  fff81d3c        23   func ,g         0
+  _lcd_buffer_flush
+                                  fff81d5f        20   func ,g         2
+  _main
+                                  fff81d7f        bf   func ,g         1
+  _Setup
+                                  fff81e3e       16a   func ,g         1
+  _Callback_1ms
+                                  fff81fa8        2b   func ,g         0
+  _Callback_5ms
+                                  fff81fd3        1b   func ,g         0
+  _Callback_10ms
+                                  fff81fee         d   func ,g         0
+  _Callback_20ms
+                                  fff81ffb       1e0   func ,g         1
+  _Callback_50ms
+                                  fff821db         c   func ,g         0
+  _Callback_100ms
+                                  fff821e7         1   func ,g         0
+  _Callback_500ms
+                                  fff821e8         1   func ,g         0
+  _Callback_1000ms
+                                  fff821e9         3   func ,g         0
+  _Fallback
+                                  fff821ec        51   func ,g         2
+  _Sonar_Fallback
+                                  fff8223d         6   func ,g         1
+FILE=.\src\LowLevelDrivers\MTU2a\MTU_C3.obj
+                                  fff82243  fff82316        d4
+  _Set_MTU_U0_C3
+                                  fff82243        66   func ,g         1
+  _StartCount_MTU_U0_C3
+                                  fff822a9        11   func ,g         1
+  _HaltCount_MTU_U0_C3
+                                  fff822ba        11   func ,g         1
+  _GetTGR_A_MTU_U0_C3
+                                  fff822cb         8   func ,g         1
+  _SetTGR_A_MTU_U0_C3
+                                  fff822d3        11   func ,g         0
+  _SetTGR_B_MTU_U0_C3
+                                  fff822e4        11   func ,g         1
+  _SetTGR_C_MTU_U0_C3
+                                  fff822f5        11   func ,g         0
+  _SetTGR_D_MTU_U0_C3
+                                  fff82306        11   func ,g         1
+FILE=.\src\LowLevelDrivers\MTU2a\MTU_C4.obj
+                                  fff82317  fff823ea        d4
+  _Set_MTU_U0_C4
+                                  fff82317        66   func ,g         1
+  _StartCount_MTU_U0_C4
+                                  fff8237d        11   func ,g         1
+  _HaltCount_MTU_U0_C4
+                                  fff8238e        11   func ,g         1
+  _GetTGR_A_MTU_U0_C4
+                                  fff8239f         8   func ,g         1
+  _SetTGR_A_MTU_U0_C4
+                                  fff823a7        11   func ,g         0
+  _SetTGR_B_MTU_U0_C4
+                                  fff823b8        11   func ,g         1
+  _SetTGR_C_MTU_U0_C4
+                                  fff823c9        11   func ,g         0
+  _SetTGR_D_MTU_U0_C4
+                                  fff823da        11   func ,g         1
+FILE=.\src\LowLevelDrivers\MTU2a\MTU_C5.obj
+                                  fff823eb  fff8248f        a5
+  _MTU5U_Start
+                                  fff823eb        19   func ,g         1
+  _MTU5U_Stop
+                                  fff82404        19   func ,g         2
+  _MTU5U_Setup
+                                  fff8241d        63   func ,g         1
+  _MTU5U_SetTimerCounter
+                                  fff82480         8   func ,g         0
+  _MTU5U_GetTimerCounter
+                                  fff82488         8   func ,g         2
+FILE=.\src\LowLevelDrivers\CMT.obj
+                                  fff82490  fff825ab       11c
+  _CMT_init
+                                  fff82490        51   func ,g         1
+  _ms_delay
+                                  fff824e1        11   func ,g         4
+  _getTime
+                                  fff824f2         9   func ,g         0
+  _CMT_isr
+                                  fff824fb        b1   func ,l         0
+FILE=.\src\LowLevelDrivers\I2C.obj
+                                  fff825ac  fff825cb        20
+  _riic_master_init
+                                  fff825ac        20   func ,g         1
+FILE=.\src\Ducted_Drivers\AHRS.obj
+                                  fff825cc  fff8344a       e7f
+  _MadgwickAHRSupdate
+                                  fff825cc       9f1   func ,g         1
+  _MadgwickAHRSupdateIMU
+                                  fff82fbd       35e   func ,g         0
+  _invSqrt
+                                  fff8331b        27   func ,g         0
+  _get_Angle_AHRS
+                                  fff83342       109   func ,g         1
+FILE=.\src\Ducted_Drivers\AHRS_Mahony.obj
+                                  fff8344b  fff83f42       af8
+  _MahonyAHRSupdate
+                                  fff8344b       70a   func ,g         1
+  _MahonyAHRSupdateIMU
+                                  fff83b55       29a   func ,g         0
+  _inversSqrt
+                                  fff83def        27   func ,g         0
+  _get_Angle_AHRS_Mahony
+                                  fff83e16       12d   func ,g         0
+FILE=.\src\Ducted_Drivers\AverageFilter.obj
+                                  fff83f43  fff83f97        55
+  _Init_AVG
+                                  fff83f43        14   func ,g         2
+  _Compute_AVG
+                                  fff83f57        41   func ,g         2
+FILE=.\src\Ducted_Drivers\HMC5883L.obj
+                                  fff83f98  fff8440a       473
+  _Get_Mag_Value
+                                  fff83f98        c1   func ,g         1
+  _Get_Mag_Value_Normalized
+                                  fff84059        90   func ,g         2
+  _Get_Mag_Heading
+                                  fff840e9        3c   func ,g         0
+  _Setup_HMC5883L
+                                  fff84125       1df   func ,g         1
+  _IMU_write_AUXMASTER
+                                  fff84304        83   func ,g         1
+  _Get_Mag_Heading_Compensated
+                                  fff84387        84   func ,g         0
+FILE=.\src\Ducted_Drivers\IMU_write_read.obj
+                                  fff8440b  fff8445e        54
+  _IMU_write
+                                  fff8440b        28   func ,g        2a
+  _IMU_read
+                                  fff84433        2c   func ,g        20
+FILE=.\src\Ducted_Drivers\Kalman.obj
+                                  fff8445f  fff8457c       11e
+  _init_Kalman
+                                  fff8445f        61   func ,g         1
+  _getAngle
+                                  fff844c0        b7   func ,g         2
+  _setAngle
+                                  fff84577         3   func ,g         0
+  _getRate
+                                  fff8457a         3   func ,g         0
+FILE=.\src\Ducted_Drivers\MPU6050.obj
+                                  fff8457d  fff84e25       8a9
+  _MPU6050_Test_I2C
+                                  fff8457d        45   func ,g         1
+  _Setup_MPU6050
+                                  fff845c2       19b   func ,g         1
+  _Calibrate_Accel
+                                  fff8475d        9c   func ,g         0
+  _Get_Accel_Values
+                                  fff847f9        c1   func ,g         2
+  _Get_Accel_Gravity_Power
+                                  fff848ba        9f   func ,g         2
+  _Get_Accel_Angles
+                                  fff84959        5e   func ,g         1
+  _Calibrate_Gyros
+                                  fff849b7       2df   func ,g         1
+  _Get_Gyro_Value
+                                  fff84c96        f1   func ,g         1
+  _Get_Gyro_Rates
+                                  fff84d87        9f   func ,g         1
+FILE=.\src\Ducted_Drivers\MS5611-01BA01.obj
+                                  fff84e26  fff851bf       39a
+  _MS5611_Init
+                                  fff84e26         c   func ,g         0
+  _MS5611_Reset
+                                  fff84e32        40   func ,g         1
+  _MS5611_Convert_Dx
+                                  fff84e72        60   func ,g         0
+  _MS5611_Read_Prom
+                                  fff84ed2        52   func ,g         1
+  _MS5611_Read_Coef
+                                  fff84f24        2b   func ,g         1
+  _MS5611_Read_PT
+                                  fff84f4f       271   func ,g         0
+FILE=.\src\Ducted_Drivers\Motor.obj
+                                  fff851c0  fff85275        b6
+  _Motors_Init
+                                  fff851c0         4   func ,g         1
+  _Motors_On
+                                  fff851c4         4   func ,g         1
+  _Motor_Arm
+                                  fff851c8        11   func ,g         2
+  _Motor_Write_PWM
+                                  fff851d9        80   func ,g         1
+  _Motor_Write_us
+                                  fff85259        19   func ,g         5
+  _Motors_Off
+                                  fff85272         4   func ,g         1
+FILE=.\src\Ducted_Drivers\PID.obj
+                                  fff85276  fff852f2        7d
+  _PID_Init
+                                  fff85276        1d   func ,g         3
+  _PID_Compute
+                                  fff85293        60   func ,g         3
+FILE=.\src\Ducted_Drivers\Servo.obj
+                                  fff852f3  fff8541b       129
+  _Servos_Init
+                                  fff852f3        20   func ,g         1
+  _Servos_Off
+                                  fff85313         4   func ,g         1
+  _Servo_Write_PWM
+                                  fff85317        84   func ,g         2
+  _Servo_Write_us
+                                  fff8539b        19   func ,g         0
+  _Servo_Write_deg
+                                  fff853b4        68   func ,g         6
+FILE=.\src\Ducted_Drivers\Sonar.obj
+                                  fff8541c  fff85521       106
+  _sonarInitialize
+                                  fff8541c        56   func ,g         1
+  _sonarGetState
+                                  fff85472         9   func ,g         6
+  _sonarTriggerStart
+                                  fff8547b        1e   func ,g         2
+  _sonarTriggerStop
+                                  fff85499        1e   func ,g         2
+  _sonarEchoCountStart
+                                  fff854b7         e   func ,g         2
+  _sonarEchoCountStop
+                                  fff854c5        1a   func ,g         1
+  _sonarGetDistance
+                                  fff854df        20   func ,g         2
+  _sonarEchoISR
+                                  fff854ff        23   func ,l         0
+FILE=.\src\Ducted_Drivers\WatchDogTimer.obj
+                                  fff85522  fff85559        38
+  _WDT_Init
+                                  fff85522        19   func ,g         2
+  _WDT_Increase
+                                  fff8553b        17   func ,g         3
+  _WDT_Reset
+                                  fff85552         4   func ,g         3
+  _WDT_Start
+                                  fff85556         4   func ,g         2
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  fff8555a  fff859d8       47f
+  _R_RSPI_Init
+                                  fff8555a       1c7   func ,g         2
+  _R_RSPI_Select
+                                  fff85721        4f   func ,g         1
+  _R_RSPI_Deselect
+                                  fff85770        4f   func ,g         1
+  _R_RSPI_BaudRateSet
+                                  fff857bf        1e   func ,g         0
+  _R_RSPI_SendReceive
+                                  fff857dd        9e   func ,g         0
+  _R_RSPI_Read
+                                  fff8587b        80   func ,g         0
+  _R_RSPI_Write
+                                  fff858fb        80   func ,g         1
+  _R_RSPI_Lock
+                                  fff8597b        38   func ,g         1
+  _R_RSPI_Unlock
+                                  fff859b3        17   func ,g         1
+  _R_RSPI_CheckLock
+                                  fff859ca         f   func ,g         0
+FILE=.\r_riic_rx600\src\r_riic_rx600.obj
+                                  fff859d9  fff85eab       4d3
+  _R_RIIC_Init
+                                  fff859d9       312   func ,g         1
+  _R_RIIC_ReleaseChannel
+                                  fff85ceb        15   func ,g         0
+  _R_RIIC_Reset
+                                  fff85d00       161   func ,g         0
+  _riic_lock
+                                  fff85e61        3d   func ,g         4
+  _riic_unlock
+                                  fff85e9e         e   func ,g        12
+FILE=.\r_riic_rx600\src\r_riic_rx600_master.obj
+                                  fff85eac  fff865ae       703
+  _R_RIIC_MasterTransmitHead
+                                  fff85eac       19c   func ,g         2
+  _R_RIIC_MasterTransmit
+                                  fff86048       1a5   func ,g         1
+  _R_RIIC_MasterReceive
+                                  fff861ed       223   func ,g         1
+  _nack_detected
+                                  fff86410        5a   func ,l         8
+  _wait_for_status
+                                  fff8646a       145   func ,l        15
+FILE=.\r_glyph\src\r_glyph.obj
+                                  fff865af  fff86655        a7
+  _R_GLYPH_Open
+                                  fff865af        46   func ,g         1
+  _R_GLYPH_CommandSend
+                                  fff865f5         8   func ,g         1
+  _R_GLYPH_DataSend
+                                  fff865fd         9   func ,g         1
+  _glyph_send_byte
+                                  fff86606        50   func ,g         2
+FILE=.\r_glyph\src\r_glyph_register.obj
+                                  fff86656  fff866b3        5e
+  _GlyphCommOpen
+                                  fff86656        2c   func ,g         1
+  _GlyphLCDOpen
+                                  fff86682        32   func ,g         1
+FILE=.\r_glyph\src\glyph\glyph.obj
+                                  fff866b4  fff869b8       305
+  _GlyphOpen
+                                  fff866b4        4c   func ,g         1
+  _GlyphClose
+                                  fff86700        40   func ,g         0
+  _GlyphWrite
+                                  fff86740         7   func ,g         0
+  _GlyphRead
+                                  fff86747         7   func ,g         0
+  _GlyphGetStatus
+                                  fff8674e         b   func ,g         0
+  _GlyphSetX
+                                  fff86759         b   func ,g         0
+  _GlyphSetY
+                                  fff86764         b   func ,g         0
+  _GlyphSetXY
+                                  fff8676f        25   func ,g         1
+  _GlyphGetXY
+                                  fff86794        25   func ,g         0
+  _GlyphSetFont
+                                  fff867b9         b   func ,g         1
+  _GlyphGetFont
+                                  fff867c4         b   func ,g         0
+  _GlyphSetDrawMode
+                                  fff867cf         b   func ,g         5
+  _GlyphChar
+                                  fff867da         b   func ,g         0
+  _GlyphString
+                                  fff867e5        24   func ,g         1
+  _GlyphGetVersionInfo
+                                  fff86809        b6   func ,g         0
+  _GlyphClearScreen
+                                  fff868bf         b   func ,g         2
+  _GlyphInvertScreen
+                                  fff868ca         5   func ,g         0
+  _GlyphNormalScreen
+                                  fff868cf         5   func ,g         1
+  _GlyphSleep
+                                  fff868d4         5   func ,g         0
+  _GlyphWake
+                                  fff868d9         5   func ,g         0
+  _GlyphDrawTestPattern
+                                  fff868de         5   func ,g         0
+  _GlyphDrawBlock
+                                  fff868e3        5f   func ,g         0
+  _GlyphEraseBlock
+                                  fff86942        5f   func ,g         1
+  _GlyphSetContrast
+                                  fff869a1         c   func ,g         0
+  _GlyphSetContrastBoost
+                                  fff869ad         c   func ,g         0
+FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
+                                  fff869b9  fff8729b       8e3
+  _ST7579_Open
+                                  fff869b9        96   func ,g         1
+  _ST7579_Close
+                                  fff86a4f         3   func ,g         1
+  _ST7579_Write
+                                  fff86a52       51b   func ,g         1
+  _ST7579_Read
+                                  fff86f6d        ac   func ,g         1
+  _ST7579_SetSystemBiasBooster
+                                  fff87019        ba   func ,g         2
+  _ST7579_SetVO_Range
+                                  fff870d3        56   func ,g         2
+  _ST7579_Config
+                                  fff87129        4e   func ,g         0
+  _ST7579_Send16bitsCommand
+                                  fff87177        1c   func ,g         1
+  _ST7579_Send8bitsData
+                                  fff87193         9   func ,g         0
+  _ST7579_SetFrameRate
+                                  fff8719c        6f   func ,g         2
+  _ST7579_SetPage
+                                  fff8720b        23   func ,g         3
+  _ST7579_SetChar
+                                  fff8722e        21   func ,g         4
+  _ST7579_SetLine
+                                  fff8724f        4d   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\lowlvl.obj
+                                  fff8729c  fff872c9        2e
+  _charput
+                                  fff8729c         0   none ,g         1
+  __C2ESTART
+                                  fff8729c         0   none ,l         0
+  __TXLOOP
+                                  fff872a5         0   none ,l         1
+  __WRITEFC2E0
+                                  fff872ab         0   none ,l         0
+  __CHARPUTEXIT
+                                  fff872b2         0   none ,l         0
+  _charget
+                                  fff872b3         0   none ,g         1
+  __E2CSTART
+                                  fff872b3         0   none ,l         0
+  __RXLOOP
+                                  fff872bc         0   none ,l         1
+  __READFE2C0
+                                  fff872c2         0   none ,l         0
+  __CHARGETEXIT
+                                  fff872c9         0   none ,l         0
+FILE=.\r_bsp\board\rdkrx63n\hwsetup.obj
+                                  fff872ca  fff87413       14a
+  _hardware_setup
+                                  fff872ca       14a   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\lcd.obj
+                                  fff87414  fff874aa        97
+  _lcd_initialize
+                                  fff87414        35   func ,g         1
+  _lcd_clear
+                                  fff87449         c   func ,g         1
+  _lcd_display
+                                  fff87455        56   func ,g         b
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff874ab  fff87643       199
+  __INIT_IOLIB
+                                  fff874ab        77   func ,g         1
+  __CLOSEALL
+                                  fff87522        21   func ,g         1
+  _open
+                                  fff87543        79   func ,g         1
+  _close
+                                  fff875bc         3   func ,g         1
+  _write
+                                  fff875bf        42   func ,g         1
+  _read
+                                  fff87601        3f   func ,g         0
+  _lseek
+                                  fff87640         4   func ,g         0
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  fff87644  fff876ed        aa
+  _PowerON_Reset_PC
+                                  fff87644        aa   entry,g         1
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  fff876ee  fff8770e        21
+  _sbrk
+                                  fff876ee        21   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\vecttbl.obj
+                                  fff8770f  fff87720        12
+  _excep_supervisor_inst_isr
+                                  fff8770f         3   func ,g         1
+  _excep_undefined_inst_isr
+                                  fff87712         3   func ,g         1
+  _excep_floating_point_isr
+                                  fff87715         3   func ,g         1
+  _non_maskable_isr
+                                  fff87718         3   func ,g         1
+  _undefined_interrupt_source_isr
+                                  fff8771b         3   func ,g         7
+  _bus_error_isr
+                                  fff8771e         3   func ,g         0
+FILE=asinf
+                                  fff87721  fff8781d        fd
+  _poly_asinf
+                                  fff87721        4b   func ,l         1
+  _asinf_special
+                                  fff8776c        2d   func ,l         1
+  _asinl
+                                  fff87799         2   func ,g         0
+  _asin
+                                  fff8779b         2   func ,g         3
+  _asinf
+                                  fff8779d        81   func ,g         1
+FILE=atanf
+                                  fff8781e  fff8793e       121
+  _poly_atanf
+                                  fff8781e        73   func ,l         3
+  _atanf_special_case
+                                  fff87891        25   func ,l         2
+  _atanl
+                                  fff878b6         2   func ,g         0
+  _atan
+                                  fff878b8         2   func ,g         5
+  _atanf
+                                  fff878ba        85   func ,g         1
+FILE=atan2f
+                                  fff8793f  fff8796b        2d
+  _atan2l
+                                  fff8793f         2   func ,g         0
+  _atan2
+                                  fff87941         2   func ,g         5
+  _atan2f
+                                  fff87943        29   func ,g         1
+FILE=cosf
+                                  fff8796c  fff8799f        34
+  _cosl
+                                  fff8796c         2   func ,g         0
+  _cos
+                                  fff8796e         2   func ,g         3
+  _cosf
+                                  fff87970        30   func ,g         1
+FILE=sinf
+                                  fff879a0  fff879e0        41
+  _sinl
+                                  fff879a0         2   func ,g         0
+  _sin
+                                  fff879a2         2   func ,g         3
+  _sinf
+                                  fff879a4        3d   func ,g         1
+FILE=powf
+                                  fff879e1  fff87a0d        2d
+  _powl
+                                  fff879e1         2   func ,g         0
+  _pow
+                                  fff879e3         2   func ,g         d
+  _powf
+                                  fff879e5        29   func ,g         1
+FILE=sqrtf
+                                  fff87a0e  fff87ae1        d4
+  _in_sqrtf1
+                                  fff87a0e        4f   func ,l         1
+  _sqrt_rare0
+                                  fff87a5d        27   func ,l         1
+  _sqrtl
+                                  fff87a84         2   func ,g         0
+  _sqrt
+                                  fff87a86         2   func ,g         4
+  _sqrtf
+                                  fff87a88        5a   func ,g         2
+FILE=freopen
+                                  fff87ae2  fff87b10        2f
+  _freopen
+                                  fff87ae2        2f   func ,g         3
+FILE=fclose
+                                  fff87b11  fff87b64        54
+  _fclose
+                                  fff87b11        54   func ,g         4
+FILE=printf
+                                  fff87b65  fff87ba3        3f
+  _prout
+                                  fff87b65        1d   func ,l         1
+  _printf
+                                  fff87b82        22   func ,g         6
+FILE=sprintf
+                                  fff87ba4  fff87bda        37
+  _prout
+                                  fff87ba4         b   func ,l         1
+  _sprintf
+                                  fff87baf        2c   func ,g         7
+FILE=vsprintf
+                                  fff87bdb  fff87c0e        34
+  _prout
+                                  fff87bdb         b   func ,l         1
+  _vsprintf
+                                  fff87be6        29   func ,g         1
+FILE=__initsct
+                                  fff87c0f  fff87c58        4a
+  __INITSCT
+                                  fff87c0f         0   none ,g         1
+  loop1
+                                  fff87c21         0   none ,l         1
+  next_loop1
+                                  fff87c2f         0   none ,l         2
+  loop3
+                                  fff87c41         0   none ,l         1
+  next_loop3
+                                  fff87c52         0   none ,l         2
+FILE=free
+                                  fff87c59  fff87cdb        83
+  _free
+                                  fff87c59        83   func ,g         7
+FILE=malloc
+                                  fff87cdc  fff87db9        de
+  _findmem
+                                  fff87cdc        7b   func ,l         1
+  _malloc
+                                  fff87d57        63   func ,g         6
+FILE=_i_atn2s
+                                  fff87dba  fff87de5        2c
+  __in_atan2s
+                                  fff87dba        2c   func ,g         1
+FILE=_in_pows
+                                  fff87de6  fff87eee       109
+  __in_pows
+                                  fff87de6       109   func ,g         1
+FILE=asincosfsub
+                                  fff87eef  fff87f83        95
+  ___poly_acosf
+                                  fff87eef        55   func ,g         1
+  ___poly_acosf_neg
+                                  fff87f44        40   func ,g         1
+FILE=nanfval
+                                  fff87f84  fff87f8a         7
+  ___nanf_value
+                                  fff87f84         7   func ,g         3
+FILE=sincosfsub
+                                  fff87f8b  fff88074        ea
+  ___poly_sinf
+                                  fff87f8b        31   func ,g         3
+  ___poly_cosf
+                                  fff87fbc        28   func ,g         3
+  _poly_cosfn
+                                  fff87fe4         7   func ,l         1
+  _poly_sinfn
+                                  fff87feb         5   func ,l         1
+  _sincosf_special
+                                  fff87ff0        33   func ,l         1
+  ___internal_sincosf
+                                  fff88023        52   func ,g         4
+FILE=fwrite
+                                  fff88075  fff88147        d3
+  _fwrite
+                                  fff88075        d3   func ,g         1
+FILE=fflush
+                                  fff88148  fff881ca        83
+  _fflush
+                                  fff88148        83   func ,g         5
+FILE=xfoprep
+                                  fff881cb  fff882a2        d8
+  __Foprep
+                                  fff881cb        d8   func ,g         1
+FILE=xfofind
+                                  fff882a3  fff88330        8e
+  __Fofind
+                                  fff882a3        45   func ,g         0
+  __Fofree
+                                  fff882e8        49   func ,g         2
+FILE=xprintf
+                                  fff88331  fff88596       266
+  __Printf
+                                  fff88331       266   func ,g         3
+FILE=xgetmem
+                                  fff88597  fff885b1        1b
+  __Getmem
+                                  fff88597        1b   func ,g         1
+FILE=fmodf
+                                  fff885b2  fff885e3        32
+  _fmodl
+                                  fff885b2         2   func ,g         0
+  _fmod
+                                  fff885b4         2   func ,g         1
+  _fmodf
+                                  fff885b6        2e   func ,g         2
+FILE=_i_atans
+                                  fff885e4  fff88755       172
+  __in_atans
+                                  fff885e4       172   func ,g         1
+FILE=_i_ldes
+                                  fff88756  fff887d4        7f
+  __in_ldexps
+                                  fff88756        7f   func ,g         4
+FILE=_in_exps
+                                  fff887d5  fff888cf        fb
+  __in_exps
+                                  fff887d5        fb   func ,g         2
+FILE=_in_logs
+                                  fff888d0  fff88998        c9
+  __in_logs
+                                  fff888d0        c9   func ,g         2
+FILE=xfwprep
+                                  fff88999  fff88a31        99
+  __Fwprep
+                                  fff88999        99   func ,g         1
+FILE=xputfld
+                                  fff88a32  fff88eca       499
+  __Putfld
+                                  fff88a32       499   func ,g         1
+FILE=xfopen
+                                  fff88ecb  fff88efa        30
+  __Fopen
+                                  fff88ecb        30   func ,g         1
+FILE=xvacopy
+                                  fff88efb  fff88f02         8
+  __Vacopy
+                                  fff88efb         8   func ,g         2
+FILE=xputtxt
+                                  fff88f03  fff891e7       2e5
+  __Puttxt
+                                  fff88f03       2e5   func ,g         3
+FILE=strchr
+                                  fff891e8  fff891fd        16
+  _strchr
+                                  fff891e8        16   func ,g         2
+FILE=xctype
+                                  fff891fe  fff89213        16
+  __Getpctype
+                                  fff891fe        16   func ,g         0
+FILE=_a_atans
+                                  fff89214  fff89238        25
+  __app_atans
+                                  fff89214        25   func ,g         4
+FILE=_i_fmds
+                                  fff89239  fff89312        da
+  __in_fmods
+                                  fff89239        da   func ,g         2
+FILE=xldtob
+                                  fff89313  fff8974a       438
+  __Ldtob
+                                  fff89313       438   func ,g         1
+FILE=xputstr
+                                  fff8974b  fff8982a        e0
+  __Putstr
+                                  fff8974b        e0   func ,g         1
+FILE=xlitob
+                                  fff8982b  fff89942       118
+  __Litob
+                                  fff8982b       118   func ,g         1
+FILE=xgenld
+                                  fff89943  fff89bf0       2ae
+  __Genld
+                                  fff89943       2ae   func ,g         1
+FILE=xwctomb
+                                  fff89bf1  fff89d49       159
+  __Wctombx
+                                  fff89bf1       113   func ,g         1
+  __Wctomb
+                                  fff89d04        46   func ,g         1
+FILE=xstate
+                                  fff89d4a  fff89d7b        32
+  __Getmbcurmax
+                                  fff89d4a        16   func ,g         2
+  __Getpmbstate
+                                  fff89d60        1c   func ,g         0
+FILE=xldscale
+                                  fff89d7c  fff89d7f         4
+  __LDscale
+                                  fff89d7c         4   func ,g         1
+FILE=xldunsca
+                                  fff89d80  fff89d83         4
+  __LDunscale
+                                  fff89d80         4   func ,g         1
+FILE=__COM_DIV64u
+                                  fff89d84  fff89e1c        99
+  __COM_DIV64u
+                                  fff89d84         0   none ,g         2
+  _Loop_Init
+                                  fff89d8e         0   none ,l         2
+  _Loop
+                                  fff89d96         0   none ,l         1
+  _DivStart
+                                  fff89da2         0   none ,l         3
+  _Success
+                                  fff89db0         0   none ,l         1
+  _DivEnd
+                                  fff89dbc         0   none ,l         0
+  IXI6DIV
+                                  fff89dc1         0   none ,l         1
+  IXI4DIV
+                                  fff89dd3         0   none ,l         1
+  IXI2DIV
+                                  fff89de3         0   none ,l         1
+  I8I2DIV
+                                  fff89deb         0   none ,l         1
+  I4I2DIV
+                                  fff89e19         0   none ,l         1
+  _i8divU_End
+                                  fff89e1c         0   none ,l         0
+FILE=__COM_MOD64u
+                                  fff89e1d  fff89ea3        87
+  __COM_MOD64u
+                                  fff89e1d         0   none ,g         1
+  _Loop_Init
+                                  fff89e27         0   none ,l         2
+  _Loop
+                                  fff89e2b         0   none ,l         1
+  _DivStart
+                                  fff89e37         0   none ,l         3
+  _Success
+                                  fff89e45         0   none ,l         1
+  _DivEnd
+                                  fff89e4d         0   none ,l         0
+  IXI6DIV
+                                  fff89e4e         0   none ,l         1
+  IXI4DIV
+                                  fff89e60         0   none ,l         1
+  IXI2DIV
+                                  fff89e70         0   none ,l         1
+  I8I2DIV
+                                  fff89e78         0   none ,l         1
+  I4I2DIV
+                                  fff89e98         0   none ,l         1
+FILE=_div
+                                  fff89ea4  fff89eaf         c
+  _ldiv
+                                  fff89ea4         0   none ,g         1
+  _div
+                                  fff89ea4         0   none ,g         1
+FILE=localeco
+                                  fff89eb0  fff89eb6         7
+  _localeconv
+                                  fff89eb0         7   func ,g         1
+FILE=xwcstate
+                                  fff89eb7  fff89ed2        1c
+  __Getpwcstate
+                                  fff89eb7        1c   func ,g         0
+FILE=xfdscale
+                                  fff89ed3  fff89ff6       124
+  __FDscale
+                                  fff89ed3       124   func ,g         1
+FILE=xfdunsca
+                                  fff89ff7  fff8a051        5b
+  __FDunscale
+                                  fff89ff7        5b   func ,g         1
+FILE=xfdnorm
+                                  fff8a052  fff8a0d0        7f
+  __FDnorm
+                                  fff8a052        7f   func ,g         2
+
+SECTION=W_1
+FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
+                                  fff8a0d4  fff8a0f7        24
+
+SECTION=W_2
+FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
+                                  fff8a0f8  fff8a14d        56
+
+SECTION=$ADDR_C_FFFFFF80
+FILE=.\r_bsp\board\rdkrx63n\flash_options.obj
+                                  ffffff80  ffffff8f        10
+  _flash_options
+                                  ffffff80        10   data ,g         0
+
+SECTION=FIXEDVECT
+FILE=.\r_bsp\board\rdkrx63n\vecttbl.obj
+                                  ffffff90  ffffffff        70
+  _Fixed_Vectors
+                                  ffffff90        70   data ,g         0
+
+Absolute value symbols
+FILE=.\r_bsp\board\rdkrx63n\lowlvl.obj
+  TXFL0EN
+                                  00000100         0   none ,l         0
+  RXFL0EN
+                                  00001000         0   none ,l         0
+  FE2C0
+                                  00084090         0   none ,l         0
+  DBGSTAT
+                                  000840c0         0   none ,l         0
+  FC2E0
+                                  00084080         0   none ,l         0
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
