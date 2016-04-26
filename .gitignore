@@ -1,3 +1,20 @@
+/Debug/
+.*
+.*DS_Store
+/ADC_OneShot.hwp
+/ADC_OneShot.nav
+/ADC_OneShot.tps
+/ADC_OneShot.x (1).launch
+/ADC_OneShot.x (2).launch
+/DefaultSession.hsf
+/description.txt
+/Ducted_Fan.x.launch
+/JLink.hsf
+/jlink.ini
+/makefile.init
+/old_version_2.0_001DefaultSession.hsf
+/old_version_2.0_001JLink.hsf
+
 # Object files
 *.o
 *.ko
