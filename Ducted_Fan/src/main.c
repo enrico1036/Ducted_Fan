@@ -77,6 +77,7 @@ Includes   <System Includes> , "Project Includes"
 #include "Ducted_Drivers/AHRS.h"
 #include "Ducted_Drivers/WatchDogTimer.h"
 #include "Ducted_Drivers/AverageFilter.h"
+#include "Ducted_Drivers/RC_CH1.h"
 
 /*******************************************************************************
  Prototypes for local functions
@@ -92,6 +93,7 @@ void Callback_500ms();
 void Callback_1000ms();
 void Fallback();
 void Sonar_Fallback();
+void Rc_Fallback();
 
 /*******************************************************************************
  Global variables
@@ -153,6 +155,7 @@ float dt = 0.02;
 
 WDT_struct sonarWDT;
 WDT_struct mainWDT;
+WDT_struct rcWDT;
 
 
 /*******************************************************************************
@@ -240,6 +243,10 @@ void Setup() {
 
 	/* Initialize sonar */
 	sonarInitialize(); //must be initialized before IIC, otherwise it will not work
+
+	/* Initialize rc */
+	rcInitialize();
+
 	/* Setup the 12-bit A/D converter */
 	S12ADC_init();
 
@@ -281,10 +288,13 @@ void Setup() {
 	desiredState.key.motor_diff_us = 0;
 	desiredState.key.abs.pos.z = 0.20;
 	altitudeValue = 0;
+
 	mainWDT = WDT_Init(500, Fallback);
 	WDT_Start(&mainWDT);
 	sonarWDT = WDT_Init(60, Sonar_Fallback);
 	WDT_Start(&sonarWDT);
+	rcWDT = WDT_Init(30, Rc_Fallback);
+	WDT_Start(&rcWDT);
 }
 void Callback_1ms() {
 	/* Start the A/D converter */
@@ -294,6 +304,9 @@ void Callback_1ms() {
 	if (sonarGetState() == SONAR_ECHO){
 		WDT_Increase(&sonarWDT);
 	}
+	if(rcGetState() != RC_READY) {
+		WDT_Increase(&rcWDT);
+	}
 
 	/* Wait for the conversion to complete */
 	while (false == S12ADC_conversion_complete()) {
@@ -301,16 +314,24 @@ void Callback_1ms() {
 	/* Fetch the results from the ADC */
 	analogRead = S12ADC_read_AN002();
 
-	if(S12ADC_read_AN003() < 200)
-		Fallback();
-	altitudeValue = map(S12ADC_read_AN003(), 204.8, 409.6, 0, 3);
+//	if(S12ADC_read_AN003() < 200)
+//		Fallback();
+//	lcd_buffer_print(LCD_LINE3, "AN: %5d", S12ADC_read_AN003());
+//	altitudeValue = map(S12ADC_read_AN003(), 204.8, 409.6, 0, 3);
 }
 void Callback_5ms() {
 	if (sonarGetState() == SONAR_TRIGGER) {
-			sonarTriggerStop();
-			sonarEchoCountStart();
-			WDT_Reset(&sonarWDT);
-		}
+		sonarTriggerStop();
+		sonarEchoCountStart();
+		WDT_Reset(&sonarWDT);
+	}
+
+	if(rcGetState() == RC_READY) {
+		lcd_buffer_print(LCD_LINE3, "RC: %5d", rcGetUs());
+		altitudeValue = map(rcGetUs(), 1000, 2000, 0, 3);
+		rcCountStart();
+		WDT_Reset(&rcWDT);
+	}
 }
 
 static double sonarDistance = 0;
@@ -322,7 +343,7 @@ void Callback_10ms() {
 void Callback_20ms() {
 	//desiredState.key.abs.pos.z = altitudeValue / 1000.0;
 	desiredState.key.abs.pos.z = altitudeValue;
-	lcd_buffer_print(LCD_LINE3, "Set: %1.3f", desiredState.key.abs.pos.z);
+//	lcd_buffer_print(LCD_LINE3, "Set: %1.3f", desiredState.key.abs.pos.z);
 
 	/* Setting motor speed based on altitude */
 	lcd_buffer_print(LCD_LINE4, "In: %1.3f", sonarDistance);
@@ -397,5 +418,12 @@ void Fallback() {
 
 void Sonar_Fallback() {
 	sonarEchoCountStop();
+	lcd_display(LCD_LINE7, " Sonar ");
 	Fallback();	//TODO: remove this call when barometer will be used
+}
+
+void Rc_Fallback() {
+	rcCountStop();
+	lcd_display(LCD_LINE7, " Sonar ");
+	Fallback();
 }

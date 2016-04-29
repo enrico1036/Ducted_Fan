@@ -5,7 +5,7 @@
  *      Author: Matteo
  */
 
-#include "MTU_C5.h"
+#include <MTU2a/MTU_C5U.h>
 
 
 void MTU5U_Start() {
@@ -60,7 +60,7 @@ void MTU5U_Setup() {
 	MSTP(MTU5) = 0;
 
 	// Set MTU5 pre-scaler to PCLK/64
-	MTU5.TCRU.BIT.TPSC = 0x02;
+	MTU5.TCRU.BIT.TPSC = 0x03;
 	// Make MTU5U count
 	MTU5.TIORU.BIT.IOC = 0x1d;
 	// Enable interrupt on input detected

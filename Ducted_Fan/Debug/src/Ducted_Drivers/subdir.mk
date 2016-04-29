@@ -14,6 +14,7 @@ C_SRCS += \
 ..\src/Ducted_Drivers/MS5611-01BA01.c \
 ..\src/Ducted_Drivers/Motor.c \
 ..\src/Ducted_Drivers/PID.c \
+..\src/Ducted_Drivers/RC_CH1.c \
 ..\src/Ducted_Drivers/Servo.c \
 ..\src/Ducted_Drivers/Sonar.c \
 ..\src/Ducted_Drivers/WatchDogTimer.c 
@@ -29,6 +30,7 @@ C_DEPS += \
 ./src/Ducted_Drivers/MS5611-01BA01.d \
 ./src/Ducted_Drivers/Motor.d \
 ./src/Ducted_Drivers/PID.d \
+./src/Ducted_Drivers/RC_CH1.d \
 ./src/Ducted_Drivers/Servo.d \
 ./src/Ducted_Drivers/Sonar.d \
 ./src/Ducted_Drivers/WatchDogTimer.d 
@@ -44,6 +46,7 @@ OBJS += \
 ./src/Ducted_Drivers/MS5611-01BA01.obj \
 ./src/Ducted_Drivers/Motor.obj \
 ./src/Ducted_Drivers/PID.obj \
+./src/Ducted_Drivers/RC_CH1.obj \
 ./src/Ducted_Drivers/Servo.obj \
 ./src/Ducted_Drivers/Sonar.obj \
 ./src/Ducted_Drivers/WatchDogTimer.obj 

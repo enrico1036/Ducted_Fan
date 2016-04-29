@@ -1,9 +1,10 @@
 #ifndef SRC_SONAR_H_
 #define SRC_SONAR_H_
 
+#include <MTU2a/MTU_C5U.h>
+
 #include <machine.h>
 #include <platform.h>
-#include "LowLevelDrivers/MTU2a/MTU_C5.h"
 
 #define SONAR_SOUND_SPEED	343.80000
 #define SONAR_MAX_DISTANCE	  4.00000

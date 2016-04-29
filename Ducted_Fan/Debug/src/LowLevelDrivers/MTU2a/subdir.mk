@@ -6,17 +6,20 @@
 C_SRCS += \
 ..\src/LowLevelDrivers/MTU2a/MTU_C3.c \
 ..\src/LowLevelDrivers/MTU2a/MTU_C4.c \
-..\src/LowLevelDrivers/MTU2a/MTU_C5.c 
+..\src/LowLevelDrivers/MTU2a/MTU_C5U.c \
+..\src/LowLevelDrivers/MTU2a/MTU_C5W.c 
 
 C_DEPS += \
 ./src/LowLevelDrivers/MTU2a/MTU_C3.d \
 ./src/LowLevelDrivers/MTU2a/MTU_C4.d \
-./src/LowLevelDrivers/MTU2a/MTU_C5.d 
+./src/LowLevelDrivers/MTU2a/MTU_C5U.d \
+./src/LowLevelDrivers/MTU2a/MTU_C5W.d 
 
 OBJS += \
 ./src/LowLevelDrivers/MTU2a/MTU_C3.obj \
 ./src/LowLevelDrivers/MTU2a/MTU_C4.obj \
-./src/LowLevelDrivers/MTU2a/MTU_C5.obj 
+./src/LowLevelDrivers/MTU2a/MTU_C5U.obj \
+./src/LowLevelDrivers/MTU2a/MTU_C5W.obj 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -33,8 +33,6 @@ src/main.obj src/main.d: ../src/Ducted_Drivers/PID.h
 ../src/Ducted_Drivers/PID.h:
 src/main.obj src/main.d: ../src/Ducted_Drivers/Sonar.h
 ../src/Ducted_Drivers/Sonar.h:
-src/main.obj src/main.d: ../src/LowLevelDrivers/MTU2a/MTU_C5.h
-../src/LowLevelDrivers/MTU2a/MTU_C5.h:
 src/main.obj src/main.d: ../src/LowLevelDrivers/CMT.h
 ../src/LowLevelDrivers/CMT.h:
 src/main.obj src/main.d: C:/Users/Enrico/git/Ducted_Fan/Ducted_Fan/src/LowLevelDrivers/I2C.h
@@ -55,3 +53,5 @@ src/main.obj src/main.d: ../src/Ducted_Drivers/WatchDogTimer.h
 ../src/Ducted_Drivers/WatchDogTimer.h:
 src/main.obj src/main.d: ../src/Ducted_Drivers/AverageFilter.h
 ../src/Ducted_Drivers/AverageFilter.h:
+src/main.obj src/main.d: ../src/Ducted_Drivers/RC_CH1.h
+../src/Ducted_Drivers/RC_CH1.h:

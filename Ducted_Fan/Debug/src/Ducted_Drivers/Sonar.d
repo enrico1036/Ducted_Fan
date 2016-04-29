@@ -13,5 +13,3 @@ src/Ducted_Drivers/Sonar.obj src/Ducted_Drivers/Sonar.d: C:/Users/Enrico/git/Duc
 C:/Users/Enrico/git/Ducted_Fan/Ducted_Fan/r_bsp/.\board\rdkrx63n\lcd.h:
 src/Ducted_Drivers/Sonar.obj src/Ducted_Drivers/Sonar.d: C:/Users/Enrico/git/Ducted_Fan/Ducted_Fan/r_bsp/.\board\rdkrx63n\sbrk.h
 C:/Users/Enrico/git/Ducted_Fan/Ducted_Fan/r_bsp/.\board\rdkrx63n\sbrk.h:
-src/Ducted_Drivers/Sonar.obj src/Ducted_Drivers/Sonar.d: C:/Users/Enrico/git/Ducted_Fan/Ducted_Fan/src/LowLevelDrivers/MTU2a/MTU_C5.h
-C:/Users/Enrico/git/Ducted_Fan/Ducted_Fan/src/LowLevelDrivers/MTU2a/MTU_C5.h:
