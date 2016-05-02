@@ -7,7 +7,7 @@
 #include <platform.h>
 
 
-#define RC_US_PER_COUNT    0.0000003333
+#define RC_US_PER_COUNT    0.333333
 
 enum RcState {
 	RC_MEASURING = 0x0,

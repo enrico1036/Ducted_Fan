@@ -18,28 +18,19 @@ void rcInitialize(void) {
 #endif
 
 	// Setup interrupt on falling edge on echo pin
-//	IEN (ICU, IRQ5) = 0x0;
-
-	//TODO: Check if correct
-	IEN (MTU5, TGIW5) = 0X0;
+	IEN (ICU, IRQ5) = 0x0;
 
 	MPC.PD5PFS.BIT.ASEL = 0;	// Not used as analog
 	MPC.PD5PFS.BIT.ISEL = 1;	// Used as interrupt
 
 	// Set interrupt priority
-//	IPR(ICU, IRQ5)= 0x03;
-
-	//TODO: Check if correct
-	IPR(MTU5, TGIW5)= 0x03;
+	IPR(ICU, IRQ5)= 0x03;
 
 	// Set interrupt detection on falling edge
-//	ICU.IRQCR[5].BIT.IRQMD = 0x1;
+	ICU.IRQCR[5].BIT.IRQMD = 0x1;
 
 	// Enable interrupt requests
-//	IEN(ICU, IRQ5)= 0x1;
-
-	//TODO: Check if correct
-	IEN(MTU5, TGIW5) = 0X1;
+	IEN(ICU, IRQ5)= 0x1;
 
 	// Lock ports
 #ifdef PLATFORM_BOARD_RDKRX63N
@@ -69,7 +60,7 @@ double rcGetUs() {
 	return ((double) rc_count * RC_US_PER_COUNT);
 }
 
-#pragma interrupt (rcISR(vect = VECT(MTU5, TGIW5)))
+#pragma interrupt (rcISR(vect = VECT(ICU, IRQ5)))
 static void rcISR() {
 	// Copy counter
 	rc_count = MTU5W_GetTimerCounter();

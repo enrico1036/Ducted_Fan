@@ -62,9 +62,9 @@ void MTU5W_Setup() {
 	// Set MTU5 pre-scaler to PCLK/16
 	MTU5.TCRW.BIT.TPSC = 0x02;
 	// Make MTU5W count
-	MTU5.TIORW.BIT.IOC = 0x1d;
+	MTU5.TIORW.BYTE= 0x1d;
 	// Enable interrupt on input detected
-	MTU5.TIER.BIT.TGIE5W = 0x1;
+//	MTU5.TIER.BIT.TGIE5W = 0x1;
 	// Use pin with timer
 	MPC.PD5PFS.BIT.PSEL = 0x01;
 

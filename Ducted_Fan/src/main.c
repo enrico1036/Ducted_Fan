@@ -293,7 +293,7 @@ void Setup() {
 	WDT_Start(&mainWDT);
 	sonarWDT = WDT_Init(60, Sonar_Fallback);
 	WDT_Start(&sonarWDT);
-	rcWDT = WDT_Init(30, Rc_Fallback);
+	rcWDT = WDT_Init(40, Rc_Fallback);
 	WDT_Start(&rcWDT);
 }
 void Callback_1ms() {
@@ -327,8 +327,9 @@ void Callback_5ms() {
 	}
 
 	if(rcGetState() == RC_READY) {
-		lcd_buffer_print(LCD_LINE3, "RC: %5d", rcGetUs());
-		altitudeValue = map(rcGetUs(), 1000, 2000, 0, 3);
+		if(rcGetUs() > 950 && rcGetUs() < 995)
+			Rc_Fallback();
+		altitudeValue = map(rcGetUs(), 1068, 2000, 0, 3);
 		rcCountStart();
 		WDT_Reset(&rcWDT);
 	}
@@ -343,7 +344,7 @@ void Callback_10ms() {
 void Callback_20ms() {
 	//desiredState.key.abs.pos.z = altitudeValue / 1000.0;
 	desiredState.key.abs.pos.z = altitudeValue;
-//	lcd_buffer_print(LCD_LINE3, "Set: %1.3f", desiredState.key.abs.pos.z);
+	lcd_buffer_print(LCD_LINE3, "Set: %1.3f", desiredState.key.abs.pos.z);
 
 	/* Setting motor speed based on altitude */
 	lcd_buffer_print(LCD_LINE4, "In: %1.3f", sonarDistance);
@@ -424,6 +425,6 @@ void Sonar_Fallback() {
 
 void Rc_Fallback() {
 	rcCountStop();
-	lcd_display(LCD_LINE7, " Sonar ");
+	lcd_display(LCD_LINE7, " RC ");
 	Fallback();
 }
