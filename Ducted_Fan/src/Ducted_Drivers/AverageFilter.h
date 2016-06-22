@@ -8,7 +8,7 @@
 #ifndef SRC_DUCTED_DRIVERS_AVERAGEFILTER_H_
 #define SRC_DUCTED_DRIVERS_AVERAGEFILTER_H_
 
-#define BUFFER_SIZE 50
+#define BUFFER_SIZE 30
 
 typedef struct {
 	float buffer[BUFFER_SIZE];

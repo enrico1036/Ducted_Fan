@@ -118,7 +118,7 @@ all: ADC_OneShot.mot
 # Tool invocations
 ADC_OneShot.mot: $(LINKER_OUTPUT_OUTPUTS)
 	@echo 'Invoking: Converter'
-	rlink   "C:\Renesas\e2_studio\Workspace\Ducted_Fan\Debug\ADC_OneShot.abs" -form=stype  -output="C:\Renesas\e2_studio\Workspace\Ducted_Fan\Debug\ADC_OneShot.mot"
+	rlink   "C:\Users\Enrico\git\Ducted_Fan\Ducted_Fan\Debug\ADC_OneShot.abs" -form=stype  -output="C:\Users\Enrico\git\Ducted_Fan\Ducted_Fan\Debug\ADC_OneShot.mot"
 	@echo 'Finished building target:'
 	@echo.
 	$(MAKE) --no-print-directory post-build
@@ -126,7 +126,7 @@ ADC_OneShot.mot: $(LINKER_OUTPUT_OUTPUTS)
 ADC_OneShot.abs: $(OBJS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS) $(ALL_ASMS) 
 	@echo 'Invoking: Linker'
 	@echo 'Building target:'
-	rlink  -subcommand="LinkerSubCommand.tmp"  -library="C:\Renesas\E2_STU~1\WORKSP~1\DUCTED~2\Debug\ADC_OneShot.lib" -noprelink -list="ADC_OneShot.map" -show -nooptimize -debug -output="C:\Renesas\e2_studio\Workspace\Ducted_Fan\Debug\ADC_OneShot.abs" -nocompress -nologo -nomessage -rom=D=R,D_1=R_1,D_2=R_2 -vect=_undefined_interrupt_source_isr
+	rlink  -subcommand="LinkerSubCommand.tmp"  -library="C:\Users\Enrico\git\DUCTED~1\DUCTED~1\Debug\ADC_OneShot.lib" -noprelink -list="ADC_OneShot.map" -show -nooptimize -debug -output="C:\Users\Enrico\git\Ducted_Fan\Ducted_Fan\Debug\ADC_OneShot.abs" -nocompress -nologo -nomessage -rom=D=R,D_1=R_1,D_2=R_2 -vect=_undefined_interrupt_source_isr
 	@echo 'Finished building:'
 	@echo.
 

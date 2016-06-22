@@ -91,7 +91,7 @@ void sonarEchoCountStop() {
 }
 
 double sonarGetDistance() {
-	return (((double) sonar_echo_count * SONAR_US_PER_COUNT) / 10000000.0) * SONAR_SOUND_SPEED;
+	return ((((double) sonar_echo_count * SONAR_US_PER_COUNT) / 1000000.0) * SONAR_SOUND_SPEED) / 2;
 	//return (sonar_echo_count * SONAR_US_PER_COUNT) / 58.0;
 }
 

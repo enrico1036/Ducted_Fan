@@ -67,6 +67,13 @@ void S12ADC_init (void)
     PORT4.PMR.BIT.B2  = 0;    /* First set I/O pin mode register to GPIO mode. */    
     MPC.P42PFS.BYTE = 0x80;   /* Set port function register to analog input, no interrupt. */    
     
+    //Same as above for P43
+    PORT4.PODR.BIT.B3 = 0;
+    PORT4.PDR.BIT.B3  = 0;
+    PORT4.PMR.BIT.B3  = 0;
+    MPC.P43PFS.BYTE = 0x80;
+
+
 #ifdef PLATFORM_BOARD_RDKRX63N
 	SYSTEM.PRCR.WORD = 0xA500; /* Protect on  */
 #endif    
@@ -85,7 +92,7 @@ void S12ADC_init (void)
     /* ADANS0: A/D Channel Select Register 0
     b15:b0  ANS0: Selects analog inputs of the channels AN000 to AN015 that are subjected to A/D conversion
     */
-    S12AD.ADANS0.WORD = 0x0004; /* Read AN002, which is connected to the potentiometer */
+    S12AD.ADANS0.WORD = 0x000C; /* Read AN002, which is connected to the potentiometer and AN003*/
 
     /* ADANS1: A/D Channel Select Register 1
 	b15:b5  Reserved: These bits are always read as 0. The write value should always be 0.
@@ -159,13 +166,29 @@ bool S12ADC_conversion_complete ()
 * Return value : uint16_t - 
 *                   The ADC conversion value.
 *******************************************************************************/
-uint16_t S12ADC_read (void)
+uint16_t S12ADC_read_AN002 (void)
 {
     uint16_t adc_result;
     
     adc_result = S12AD.ADDR2;        /* Read the result register for AN2 */
     
     return adc_result;    
+} /* End of function S12ADC_read() */
+
+/*******************************************************************************
+* Function name: S12ADC_read
+* Description  : Reads the results register for channel AN002 of the S12ADC
+* Arguments    : none
+* Return value : uint16_t -
+*                   The ADC conversion value.
+*******************************************************************************/
+uint16_t S12ADC_read_AN003 (void)
+{
+    uint16_t adc_result;
+
+    adc_result = S12AD.ADDR3;        /* Read the result register for AN2 */
+
+    return adc_result;
 } /* End of function S12ADC_read() */
 
 /*******************************************************************************
