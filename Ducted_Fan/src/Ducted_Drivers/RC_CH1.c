@@ -17,7 +17,7 @@ void rcInitialize(void) {
 	SYSTEM.PRCR.WORD = 0xA50B;
 #endif
 
-	// Setup interrupt on falling edge on echo pin
+	// Setup interrupt on falling edge on echo pin (pin 18 on jn2)
 	IEN (ICU, IRQ5) = 0x0;
 
 	MPC.PD5PFS.BIT.ASEL = 0;	// Not used as analog

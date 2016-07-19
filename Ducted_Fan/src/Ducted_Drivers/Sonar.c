@@ -23,7 +23,7 @@ void sonarInitialize(void) {
 	PORTD.PODR.BIT.B6 = 0x0;
 	PORTD.PMR.BIT.B6 = 0x0;
 
-	// Setup interrupt on falling edge on echo pin
+	// Setup interrupt on falling edge on echo pin (pin 20 on jn2)
 	IEN (ICU, IRQ7)= 0x0;
 
 	MPC.PD7PFS.BIT.ASEL = 0;	// Not used as analog

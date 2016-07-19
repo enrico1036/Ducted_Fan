@@ -64,12 +64,12 @@ struct physicalState {
 union {
 	struct physicalState key;
 	float index[sizeof(struct physicalState)];
-} desiredState;
+} desiredState;	//state variables you want to reach
 
 union {
 	struct physicalState key;
 	float index[sizeof(struct physicalState)];
-} currentState;
+} currentState;	//current state variables of the DuctedFan
 
 // Pointer to kalman structures
 extern KALMAN *pitchKalman;
@@ -92,7 +92,10 @@ AVG_Filter_struct rollAVG;
 /*Stores the value read from analog input  */
 uint16_t analogRead;
 
+/* Used to store value of altitude need to be reached */
 float altitudeValue;
+
+/* Time in seconds every which PID control is made */
 float dt = 0.02;
 
 // Structures for software watchdogs
@@ -257,7 +260,7 @@ void Callback_5ms() {
 		// (safety lever trigger)
 		if(rcGetUs() > 950 && rcGetUs() < 995)
 			Rc_Fallback();
-		// Map the microseconds into meters and use them asctime
+		// Map the microseconds into meters and use them as
 		// a setpoint for height PID
 		altitudeValue = map(rcGetUs(), 1068, 2000, 0, 3);
 		rcCountStart();
@@ -273,7 +276,6 @@ void Callback_10ms() {
 
 float outValue;	// Temporary storage for PID results
 void Callback_20ms() {
-	//desiredState.key.abs.pos.z = altitudeValue / 1000.0;
 	desiredState.key.abs.pos.z = altitudeValue;
 	lcd_buffer_print(LCD_LINE3, "Set: %1.3f", desiredState.key.abs.pos.z);
 
