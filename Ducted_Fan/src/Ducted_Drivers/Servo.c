@@ -31,7 +31,8 @@ void Servo_Write_PWM(int channel, float value)
 
 	uint16_t tgr_a_val, tgr_b_val, tgr_d_val;
 	tgr_a_val = GetTGR_A_MTU_U0_C4();
-
+	
+	// Convert percentage to TGRB value
 	switch(channel){
 	case 1:
 		tgr_b_val = (tgr_a_val*value)/100.0;
@@ -57,10 +58,12 @@ void Servo_Write_deg(int channel, float deg)
 {
 	//channel value must be 1 or 2
 	if(channel < 1 || channel > 2)	return;
-
+	
+	// make sure deg is between angle limits
 	if(deg < SERVO_MIN_BOUND_DEG) deg = SERVO_MIN_BOUND_DEG;
 	else if(deg > SERVO_MAX_BOUND_DEG) deg = SERVO_MAX_BOUND_DEG;
-
+	
+	// Add to wanted degree an eventual offset
 	switch(channel){
 	case SERVO_PITCH:
 		deg += SERVO_PITCH_TRIM;

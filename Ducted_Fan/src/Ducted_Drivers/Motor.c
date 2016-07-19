@@ -15,10 +15,6 @@ void Motors_Init()
 
 void Motors_On()
 {
-	//Set and turn on "Relay" Pin to feed motor
-	//R_PG_IO_PORT_Set_PD0();
-	//R_PG_IO_PORT_Write_PD0(1);
-
 	//Start MTU3 count
 	StartCount_MTU_U0_C3();
 }
@@ -42,6 +38,7 @@ void Motor_Write_PWM(int channel, float value)
 	uint16_t tgr_a_val, tgr_b_val, tgr_d_val;
 	tgr_a_val = GetTGR_A_MTU_U0_C3();
 
+	// calculate tgrb value from duty cycle
 	switch(channel){
 	case 1:
 		tgr_b_val = (tgr_a_val*value)/100;
@@ -65,8 +62,5 @@ void Motor_Write_us(int channel, float us)
 
 void Motors_Off()
 {
-
-	//R_PG_IO_PORT_Write_PD0(0);	//Turn off "Relay" Pin to unfeed motor
-
 	HaltCount_MTU_U0_C3();	//Stop MTU3 count
 }

@@ -19,7 +19,6 @@ enum SonarState {
 };
 
 void sonarInitialize(void) ;
-
 uint32_t sonarGetState(void);
 
 void sonarTriggerStart();

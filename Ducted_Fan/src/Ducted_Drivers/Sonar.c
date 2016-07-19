@@ -85,6 +85,7 @@ void sonarEchoCountStart() {
 }
 
 void sonarEchoCountStop() {
+	// Forced interruption of MTU5
 	sonar_echo_count = MTU5U_GetTimerCounter();
 	MTU5U_Stop();
 	sonar_state = SONAR_IDLE;
@@ -92,7 +93,6 @@ void sonarEchoCountStop() {
 
 double sonarGetDistance() {
 	return ((((double) sonar_echo_count * SONAR_US_PER_COUNT) / 1000000.0) * SONAR_SOUND_SPEED) / 2;
-	//return (sonar_echo_count * SONAR_US_PER_COUNT) / 58.0;
 }
 
 #pragma interrupt (sonarEchoISR(vect = VECT(ICU, IRQ7)))
