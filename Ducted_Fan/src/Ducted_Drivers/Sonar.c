@@ -92,6 +92,10 @@ void sonarEchoCountStop() {
 }
 
 double sonarGetDistance() {
+	// Converts timer ticks in meters by multiplying them by the constant SONAR_US_PER_COUNT to get
+	// the us spent by the sound to reach the target and return. Then the us are converted in seconds
+	// and multiplied by the sound speed[m/s] in air (25°C). The whole result is divided by 2 to get
+	// only the single distance and not the round-trip
 	return ((((double) sonar_echo_count * SONAR_US_PER_COUNT) / 1000000.0) * SONAR_SOUND_SPEED) / 2;
 }
 
